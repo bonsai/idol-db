@@ -1,0 +1,46 @@
+{
+  "_description": "Archetype / canonical example for an individual idol entry in idol-lab. Use this structure for new records; fields with `*` are required.",
+  "_schema_version": "2026-09-03",
+  "_id_prefix": "person:",
+  "entries": [
+    {
+      "id": "person:ruike-asuka",
+      "type": "idol",
+      "label": "類家明日香",
+      "label_reading": "Ruike Asuka",
+      "aliases": ["類家あすか"],
+      "group": "group:example-group",
+      "agency": "org:example-agency",
+      "active_period": {
+        "start": "2010-01",
+        "end": "2015-12"
+      },
+      "era": ["2010s"],
+      "region": "tokyo",
+      "gender": "female",
+      "birth_year": 1990,
+      "debut_age": 20,
+      "tags": ["tardol", "underground", "conceptual"],
+      "deviation_axes": ["body-shape", "career", "expression"],
+      "roles": ["vocal", "performer"],
+      "description": "樽ドルという逸脱カテゴリの原点的人物。身体規範とアイドル規範の交差点に位置づけられる。",
+      "iconic_works": ["song:example-song"],
+      "related_ids": ["genre:tardol"],
+      "sources": [
+        {
+          "url": "https://example.com/source",
+          "title": "出典タイトル",
+          "publisher": "出版社名",
+          "published_at": "2026-01-01",
+          "accessed_at": "2026-09-03"
+        }
+      ],
+      "provenance": {
+        "confidence": "high",
+        "verified": true,
+        "verified_by": "human",
+        "last_verified_at": "2026-09-03"
+      }
+    }
+  ]
+}
