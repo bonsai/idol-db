@@ -1,0 +1,6 @@
+{"version":"2026-08-28","events":[
+ {"event_id":"yatai-fes-2026","name":"テレビ大阪YATAIフェス！2026","date":"2026-09-18/2026-09-23","venue":"大阪城公園・太陽の広場","region":"大阪府","category":"festival","source_url":"https://www.tv-osaka.co.jp/tvofes/","accessed_at":"2026-08-28"},
+ {"event_id":"habafes-2026-autumn","name":"はばたけ！アイドルフェス 秋の陣","date":"2026-09-21/2026-09-22","region":"大阪府","category":"idol_festival","source_url":"https://club.tv-osaka.co.jp/article/event/28966/","accessed_at":"2026-08-28","performers":["天女神樂","あゆめの","おちゃメンタル☆パーティー","カラフルスクリーム","グットクルー","新章 大阪☆春夏秋冬","シンセカイヒーロー","すーぱーぷーばぁー!!","宇宙∞プラネクシア","SAY-LA","W.ダブルヴィー","NEO BREAK","ほくりくアイドル部","POLARiS"]},
+ {"event_id":"kirameki-fes-2026","name":"きらめきフェス2026 supported by かがやきフェス","date":"2026-08-13","venue":"GORILLA HALL OSAKA","region":"大阪府","category":"idol_festival","source_url":"https://prtimes.jp/main/html/rd/p/000000035.000120809.html","accessed_at":"2026-08-28"},
+ {"event_id":"habafes-2026-summer","name":"はばたけ！アイドルフェス夏祭り","date":"2026-07-11","venue":"クリエイティブセンター大阪（CCO）名村造船所跡地","region":"大阪府","category":"idol_festival","source_url":"https://club.tv-osaka.co.jp/article/event/26440/","accessed_at":"2026-08-28"}
+]}
