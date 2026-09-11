@@ -1,0 +1,30 @@
+{
+  "_id": "ontology:spark-fes",
+  "_version": "2026-09-03",
+  "_created_at": "2026-09-03",
+  "_sources": [
+    "https://sparkfes.com/2026/artists/",
+    "https://sparkfes.com/2026/about/",
+    "https://sparkfes.com/2026/timetable/",
+    "https://sparkfes.com/2025/artists/"
+  ],
+  "_note": "2026年アティスツはJSレンダリングのため、2025年の画像リストをベース。実際の出演は変動する。",
+  "festival": {
+    "id": "festival:spark-2026",
+    "name": "SPARK 2026 in YAMANAKAKO",
+    "reading": "スパークにせんにごい やまなかつこ",
+    "abbreviation": "SPARK",
+    "twitter": "@SPARK_Fes",
+    "ticket_url": "https://t-dv.com/spark2026yamanakako",
+    "organizer": "SPARK実行委員会",
+    "dates": {"day1": "2026-09-21", "day2": "2026-09-22", "day3": "2026-09-23"},
+    "days": 3,
+    "venue": {"name": "山中湖交流プラザきらら", "english": "Minobu Kanko Plaza Kirara", "region": "yamanashi", "prefecture": "山梨県", "location": "山中湖"},
+    "categories": ["outdoor-festival", "music-festival", "idol-festival"],
+    "status": "upcoming",
+    "idol_program": {"exists": true, "description": "アイドル部門あり。地元アイドル～メジャーアイドルまで出演。"}
+  },
+  "artists_2025": {"note": "2026年はJSで動的読み込み。2025年の画像リストをベース。", "source": "https://sparkfes.com/2025/artists/", "total_count": 233, "data_file": "data/SPARK-fes-artists-2025.jsonl", "artists_count": 233},
+  "confirmed_performers_2026": [{"id": "group:lnan-l", "name": "Lって何のLですか？", "reading": "エルってナニノエル desu ka", "abbreviation": "Lなん", "group": "Lって何のLですか？", "day": "day1", "date": "2026-09-21", "status": "confirmed", "source": "https://idolwatch.jp/group/2869"}],
+  "artist_categories": [{"category": "local-idol", "description": "地域密着型アイドル（地方・ローカル）", "examples": ["Lって何のLですか？", "にっぽん!真骨頂", "こみっきゅおん！", "のんふぃく！", "ビッくエンジェル", "ひまわり(船橋)", "カミングアウト"]}, {"category": "regional-idol", "description": "都道府県代表アイドル", "examples": ["22_7", "つばきファクトリー", "東京女子流"]}, {"category": "major-idol", "description": "メジャーアイドル（全国展開）", "examples": ["SUPER☆GiRLS", "Juice=Juice", "ANGERME", "BEYOOOOONDS", "Chalca", "MAN with a MISSION", "THE ORCHESTRA TOKYO"]}, {"category": "underground-idol", "description": "アンダーグラウンドアイドル", "examples": ["@onefive", "AISTEAL", "Ideal peco", "MyDearDarlin", "MyDresscode", "Palette Parade"]}, {"category": "indie-music", "description": "インディーズミュージシャン", "examples": ["Aerolipop", "Devil ANTHEM.", "Hibana", "MightyParfait", "Task have Fun"]}, {"category": "visual-kei", "description": "ビジュアル系", "examples": ["AdamLilith", "BUNGEE GUM.", "FUJIFABRIC", "MADKID", "ALVINO", "Dazzlevanish"]}, {"category": "performance", "description": "パフォーマンス系", "examples": ["LADYBABY", "二丁目の魁カミングアウト", "マジカル・パンチライン"]}, {"category": "comedy", "description": "コメディ・ガレッジ系", "examples": ["Lucky", "Zanka", "My Dear Darlin"]}]
+}
