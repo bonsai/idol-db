@@ -1,0 +1,1 @@
+Canonical structured idol data lives here. `idol-research` produces research and marketing analysis against this data; it does not own the canonical database. `idol-playlist` owns music research and may supply validated music-domain data.
