@@ -1,0 +1,58 @@
+{
+  "_version": "2026-09-03",
+  "_id_prefix": "group:lnan-l",
+  "_sources": [
+    "https://idolwatch.jp/group/2869",
+    "https://timetreeapp.com/public_calendars/lnan_1029"
+  ],
+  "_collected_at": "2026-09-03",
+  "group": {
+    "id": "group:lnan-l",
+    "name": "Lって何のLですか？",
+    "name_abbreviation": "エルデス",
+    "name_full_reading": "エルってナニノエル desu ka",
+    "category": "local-idol",
+    "base": "tokyo",
+    "region": "tokyo",
+    "formation_date": "2024-10-29",
+    "members_count": 7,
+    "gender": "female",
+    "status": "active",
+    "promotion": {
+      "follow_bonus": "Xフォローで2ショットチェキ券2枚プレゼント",
+      "calendar": "https://timetreeapp.com/public_calendars/lnan_1029",
+      "x_account": "@lnan_idol",
+      "idolwatch": "https://idolwatch.jp/group/2869"
+    }
+  },
+  "members": [
+    {"id":"person:otose-renae","name":"音瀬れな","reading":"おとせ れな","romaji":"Otose Renae","nick":"オトセレナ","color":"pink","emoji":"🩷","birth":"2007-03-08","age":18,"status":"active"},
+    {"id":"person:yohane-luna","name":"夜羽音ルナ","reading":"よはね るな","romaji":"Yohane Luna","nick":"ヨハネルナ","color":"black","emoji":"🖤","birth":"2004-11-09","age":21,"hometown":"saitama","status":"active"},
+    {"id":"person:otohime-miumi","name":"乙姫みうみ","reading":"おとひめ みうみ","romaji":"Otohime Miumi","nick":"オトヒメミウミ","color":"white","emoji":"🤍","birth":"2007-01-17","age":18,"status":"active"},
+    {"id":"person:taito-nijika","name":"台東にじか","reading":"たいとう にじか","romaji":"Taito Nijika","nick":"タイトウニジカ","color":"red","emoji":"❤️","birth":"2005-10-10","age":20,"status":"active"},
+    {"id":"person:hanamaru-non","name":"花丸のの","reading":"はなまる のの","romaji":"Hanamaru Non","nick":"ハナマルノノ","color":"green","emoji":"💚","status":"active"},
+    {"id":"person:shinonome-rin","name":"東雲りん","reading":"しののめ りん","romaji":"Shinonome Rin","nick":"シノノメリン","color":"blue","emoji":"🩵","birth":"2003-01-27","age":22,"status":"active"},
+    {"id":"person:uni","name":"うに","reading":"うに","romaji":"Uni","color":"purple","emoji":"💜","status":"active"}
+  ],
+  "events": [
+    {"date":"2026-09-05","name":"Lって何のLですか？大阪の撮影会1日目","venue":"Zepp Namba","region":"osaka","type":"photocall","members":["otose-renae","yohane-luna","otohime-miumi","taito-nijika","hanamaru-non","shinonome-rin","uni"]},
+    {"date":"2026-09-06","name":"Lって何のLですか？大阪の撮影会2日目","venue":"Zepp Namba","region":"osaka","type":"photocall","members":["otose-renae","yohane-luna","otohime-miumi","taito-nijika","hanamaru-non","shinonome-rin","uni"]},
+    {"date":"2026-09-09","name":"Etoile -After Summer-","venue":"上野恩賜公園野外ステージ / 上野AL-TEMA","region":"tokyo","type":"live"},
+    {"date":"2026-09-13","name":"Signalフェスタ-秋の合図-","venue":"新宿DHNoA","region":"tokyo","type":"live"},
+    {"date":"2026-09-16","name":"ハルカナフェスVol.2","venue":"ZircoTokyo","region":"tokyo","type":"festival"},
+    {"date":"2026-09-18","name":"Lなん×ばりかわ×リトシグ3MANワンコインライブ！","venue":"秋葉原Galaxy","region":"tokyo","type":"3man","related_groups":["group:barikawa","group:ritosig"]},
+    {"date":"2026-09-19","name":"エクスクラメーション!!!","venue":"渋谷vident","region":"tokyo","type":"live"},
+    {"date":"2026-09-20","name":"SYNC FES","venue":"SYNCFES","region":"tokyo","type":"festival"},
+    {"date":"2026-09-21","name":"SPARK 2026 in YAMANAKAKO DAY1","name_reading":"スパーク","venue":"山中湖交流プラザきらら","venue_english":"Minobu Kanko Plaza Kirara","region":"yamanashi","prefecture":"yamanashi","type":"festival","festival_type":"outdoor-festival","description":"山中湖で行われる野外フェス。アイドル部門あり。"},
+    {"date":"2026-09-24","name":"GIRLS☆DELIGHT#417","venue":"新宿ReNY","region":"tokyo","type":"live"},
+    {"date":"2026-09-26","name":"GIRLS☆DELIGHT#418","venue":"横浜1000CLUB","region":"kanagawa","type":"live"},
+    {"date":"2026-10-10","name":"アイドルアラモードVol.33～名古屋出張SP～","venue":"名古屋 COMTEC PORTBASE","region":"aichi","type":"festival"},
+    {"date":"2027-07-19","name":"Lなん・リトシグ・ばんくる合同学力テストライブ","venue":"新宿DHNoA","region":"tokyo","type":"3man","related_groups":["group:ritosig","group:bancurl"]}
+  ],
+  "relationships": [
+    {"id":"rel-3man-1","type":"3man-partner","source":"group:lnan-l","target":"group:barikawa","event":"2026-09-18 秋葉原Galaxy"},
+    {"id":"rel-3man-2","type":"3man-partner","source":"group:lnan-l","target":"group:ritosig","event":"2026-09-18 秋葉原Galaxy"},
+    {"id":"rel-3man-3","type":"3man-partner","source":"group:lnan-l","target":"group:bancurl","event":"2027-07-19 新宿DHNoA"}
+  ],
+  "color_system": {"description":"ピンクイベント＝重要イベント","members_colors":{"pink":"otose-renae","black":"yohane-luna","white":"otohime-miumi","red":"taito-nijika","green":"hanamaru-non","blue":"shinonome-rin","purple":"uni"}}
+}
