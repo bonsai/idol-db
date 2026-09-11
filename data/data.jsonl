@@ -1,0 +1,55 @@
+{"id":"genre:tardol","type":"Idol","label":"樽ドル","norm":"slim-body","deviation":"waist/body-shape deviation","value":["familiarity","character","self-acceptance"],"period":"2000s","note":"身体規範からの逸脱が個性・親近感として商品化された現象"}
+{"id":"person:ruike-asuka","type":"Idol","label":"類家明日香","genre":"genre:tardol","period":"2000s","role":"representative","value":["character","familiarity"]}
+{"id":"genre:pochadoll","type":"BodyDeviationIdol","label":"ぽっちゃりアイドル","deviation":"thinness norm","value":["self-acceptance","dream","community"]}
+{"id":"genre:housewife-idol","type":"HousewifeIdol","label":"主婦アイドル","deviation":"youth/unmarried norm","value":["life-experience","care","familiarity"]}
+{"id":"genre:mature-idol","type":"MatureIdol","label":"熟女・成熟型アイドル","deviation":"youth norm","value":["maturity","continuity","experience"]}
+{"id":"genre:negative-idol","type":"NegativeIdol","label":"ネガティブ・キャラクター型アイドル","deviation":"positivity norm","value":["empathy","character","care"],"note":"実在アイドルの自己規定・運営上のブランド・メディア用語を区別して記録する"}
+{"id":"genre:underground-idol","type":"UndergroundIdol","label":"地下アイドル","deviation":"mainstream scale norm","value":["intimacy","empathy","participation"]}
+{"id":"genre:local-idol","type":"LocalIdol","label":"ご当地アイドル","deviation":"Tokyo-central norm","value":["local-identity","community","care"]}
+{"id":"genre:longlife-idol","type":"LongLifeIdol","label":"長寿アイドル","deviation":"graduation norm","value":["continuity","maturity","memory"]}
+{"id":"genre:self-declared-idol","type":"SelfDeclaredIdol","label":"自称アイドル","deviation":"institutional gatekeeping","value":["agency","self-naming","DIY"]}
+{"id":"genre:stray-idol","type":"StrayIdol","label":"野良アイドル","deviation":"institutional boundary","value":["agency","intimacy","experimentation"]}
+{"id":"genre:amateur-idol","type":"SelfDeclaredIdol","label":"アマチュア・アイドル","value":["participation","self-production"]}
+{"id":"genre:diy-idol","type":"DIYIdol","label":"DIYアイドル","value":["self-production","control","experimentation"]}
+{"id":"genre:cosplayer","type":"Cosplayer","label":"コスプレイヤー","medium":"character/body","value":["character-mediated-idolization","self-production"]}
+{"id":"genre:cosplayer-idol","type":"CharacterIdol","label":"コスプレイヤー・アイドル化","relation":"becomesIdolizedThrough"}
+{"id":"genre:youtuber","type":"YouTuber","label":"ユーチューバー","medium":"video","value":["self-production","platform-idolization","attention"]}
+{"id":"genre:liver","type":"Liver","label":"ライバー","medium":"live-stream","value":["real-time-idolization","interaction","fan-participation"]}
+{"id":"genre:streamer","type":"Streamer","label":"ストリーマー","medium":"live-stream/video","value":["platform-idolization","community"]}
+{"id":"genre:virtual-idol","type":"VirtualIdol","label":"バーチャルアイドル","body":"virtual-body","value":["avatar-identity","virtual-community"]}
+{"id":"genre:vtuber","type":"VTuber","label":"VTuber","body":"avatar","medium":"video/live-stream","value":["avatar-fandom","real-time-idolization"]}
+{"id":"genre:vr-idol","type":"AvatarPerformer","label":"VRアイドル","space":"virtual-space","value":["virtual-stage","avatar-identity"]}
+{"id":"genre:vrchat-idol","type":"VRChatIdol","label":"VRChatアイドル","space":"VRChat","value":["virtual-community","avatar-fandom","reality-boundary"]}
+{"id":"genre:art-idol","type":"ArtIdol","label":"美術におけるアイドル利用","medium":"art-institution","relation":["appropriatesIdolForm","usesIdolAsMaterial","criticizesIdolSystem"],"value":["critique","image","institutional-analysis"]}
+{"id":"concept:idolization","type":"Idolization","label":"偶像化","description":"人・キャラクター・アバター・作品等が反復的に注目・支持・儀礼化される過程"}
+{"id":"concept:self-naming","type":"Idolization","label":"自称","relation":"selfIdentifiesAs"}
+{"id":"concept:strayness","type":"Deviation","label":"野良性","description":"制度外から活動し、後からアイドルとして認識される状態"}
+{"id":"concept:character-mediated-idolization","type":"Idolization","label":"キャラクター媒介型偶像化","relation":"usesCharacterAsMedium"}
+{"id":"concept:body-as-medium","type":"Idolization","label":"身体を媒体とする","relation":"usesBodyAsMedium"}
+{"id":"concept:self-produced-idol","type":"Idolization","label":"自己プロデュース型偶像化","relation":"selfProduces"}
+{"id":"concept:platform-idolization","type":"Idolization","label":"プラットフォーム偶像化","relation":"buildsAudienceThrough"}
+{"id":"concept:real-time-idolization","type":"Idolization","label":"リアルタイム偶像化","relation":"interactsRealtimeWith"}
+{"id":"concept:virtual-body","type":"Idolization","label":"仮想身体","relation":"usesAvatar"}
+{"id":"concept:virtual-stage","type":"Idolization","label":"仮想ステージ","relation":"performsInVirtualSpace"}
+{"id":"concept:virtual-community","type":"FanCommunity","label":"仮想共同体","relation":"createsVirtualCommunity"}
+{"id":"concept:avatar-identity","type":"Idolization","label":"アバター・アイデンティティ","relation":"usesAvatar"}
+{"id":"concept:reality-boundary","type":"Idolization","label":"現実／仮想境界","relation":"crossesRealityBoundary"}
+{"id":"concept:fan-as-participant","type":"FanCommunity","label":"参加者としてのファン"}
+{"id":"person:konno-shiori","type":"Idol","label":"紺野栞","genre":"genre:tardol","period":"2013-","role":"successor","value":["tardol-movement-2026","character","familiarity"],"note":"2026年樽ドルランキング1位。類家明日香の後継的位置づけ"}
+{"id":"group:patya","type":"BodyDeviationIdol","label":"P♡ttya","period":"2015-","deviation":"thinness norm","value":["self-acceptance","group-concept","question-norm"],"note":"「スリムじゃないとアイドルになれないの？」を掲げたグループ"}
+{"id":"group:obachaaan","type":"HousewifeIdol","label":"オバチャーン","period":"2012-","location":"大阪","value":["local-identity","housewife-as-hero","character"],"note":"主婦・おばちゃん属性そのものをアイドル化したグループ"}
+{"id":"group:predia","type":"MatureIdol","label":"predia","period":"2010-2022","value":["mature-concept","adult-idol","experience"],"note":"「大人のアイドル」をコンセプトにしたグループ"}
+{"id":"genre:mama-idol","type":"HousewifeIdol","label":"ママドル","deviation":"single-youth norm","value":["motherhood","continuity","care"],"note":"子育て中の母親アイドル"}
+{"id":"genre:ponkotsu-idol","type":"Deviation","label":"ポンコツ系アイドル","deviation":"perfection norm","value":["humanity","comedy","empathy"],"note":"不器用・ドジをキャラクターとして売るタイプ"}
+{"id":"genre:metal-idol","type":"Idol","label":"メタルアイドル","norm":"cute-pop","deviation":"metal-music","value":["catharsis","otherworldly","technical-virtuosity"],"period":"2010s","note":"メタル音楽とアイドルの融合"}
+{"id":"genre:punk-idol","type":"Idol","label":"パンクアイドル","norm":"polished-pop","deviation":"punk-noise-rawness","value":["authenticity","self-destruction","realness"],"period":"2010s","note":"パンク/ノイズ/ハードコアとアイドルの融合"}
+{"id":"genre:rap-idol","type":"Idol","label":"ラップアイドル/HIP HOPアイドル","norm":"singing-focused","deviation":"rap-rhyme","value":["word-rhythm","street-ness","self-expression"],"period":"2010s","note":"ラップ/HIP HOP要素を含むアイドル"}
+{"id":"genre:techno-idol","type":"Idol","label":"テクノ/電波アイドル","norm":"band-live","deviation":"synth-electronic","value":["futurity","precision","worldview"],"period":"2000s","note":"テクノポップ/電波/8-bitとアイドルの融合"}
+{"id":"genre:progressive-idol","type":"Idol","label":"プログレアイドル","norm":"short-catchy","deviation":"complex-structure","value":["listening-depth","cult-fandom"],"period":"2010s","note":"直接的な例は希少だが、複雑な楽曲構造を持つアイドル楽曲あり"}
+{"id":"genre:noise-idol","type":"Idol","label":"ノイズアイドル","norm":"melody-harmony","deviation":"noise-atonality","value":["extremity","anti-art","uncompromising-presence"],"period":"2010s","note":"ノイズ音楽とアイドルの融合。極めて実例は少ない"}
+{"id":"group:babymetal","type":"Idol","label":"BABYMETAL","genre":"genre:metal-idol","period":"2013-","value":["metal-community","idol-community","catharsis","world-tour"],"note":"メタル×アイドルの完璧な融合。SU-METAL+MOAMETAL。神バンドとの分離構造"}
+{"id":"group:bis","type":"Idol","label":"BiS（Brand-new idol Society）","genre":"genre:punk-idol","period":"2010-","value":["punk-destruction","self-referential-attack","noise-collab","wack-legacy"],"note":"アイドルシステムへの自己言及的攻撃。清竜人プロデュース。Hijokaidanコラボ"}
+{"id":"group:perfume","type":"Idol","label":"Perfume","genre":"genre:techno-idol","period":"2000-","value":["techno-pop-pinnacle","nakata-production","robotic-dance","nagoya-origin"],"note":"中田ヤスタカプロデュース。テクノポップとアイドルの融合"}
+{"id":"group:denpa","type":"Idol","label":"でんぱ組.inc","genre":"genre:techno-idol","period":"2008-","value":["denpa-song","chip-tune","akiba-culture","otaku-community"],"note":"電波ソング/8-bit/秋葉原カルチャーの完成形"}
+{"id":"group:yurumerumo","type":"Idol","label":"ゆるめるモ！","genre":"genre:punk-idol","period":"2012-","value":["multi-genre-fusion","punk","rap","new-wave","denpa"],"note":"電波/パンク/ニューウェーブ/ラップを融合。極めて音楽的多様性が高い"}
+{"id":"group:shukashun","type":"Idol","label":"大阪☆春夏秋冬","genre":"genre:rap-idol","period":"2012-","value":["hip-hop-idol","rap-parts","street-dance","osaka-local"],"note":"HIP HOP×アイドルを謳う。通称しゅかしゅん"}
