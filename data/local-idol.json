@@ -1,0 +1,9 @@
+{
+  "title": "全国ご当地アイドル100組・研究用テンプレート",
+  "updated": "2026-09-03",
+  "description": "地域密着・ローカルアイドル研究用。活動中・解散・改名等は個別確認が必要。",
+  "sources": ["https://www.4goodproductions.com/map/","https://nihon-kassei.net/","https://local-idol.info/ranking/","https://www.mapple.co.jp/"],
+  "schema": {"id":"string (prefecture-city-number)","name":"string","reading":"string","prefecture":"string","city":"string","formed":"YYYY or YYYY-MM","status":"active | disbanded | hiatus | renamed | unknown","members_count":"number | unknown","concept":"string","color":"string","sns":{"twitter":"url","instagram":"url","youtube":"url","tiktok":"url","website":"url"},"notes":"string","sources":["string"],"verified":"boolean"},
+  "items": [{"id":"hokkaido-001","name":"","reading":"","prefecture":"北海道","city":"","formed":"","status":"unknown","members_count":"unknown","concept":"","color":"","sns":{},"notes":"未入力テンプレート","sources":[],"verified":false}],
+  "_status":"テンプレート構造化完了。items[0]はサンプル。残り99組は順次追加・検証予定。"
+}
