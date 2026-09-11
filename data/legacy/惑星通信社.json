@@ -1,0 +1,26 @@
+{
+  "_version": "2026-09-03",
+  "_id_prefix": "org:wakusei",
+  "_source": "https://ja.wikipedia.org/wiki/惑星通信社",
+  "_notes": "Wikipedia記事に基づく。女性アイドルグループ（事務所でなくグループ自体）",
+  "entity_type": "idol-group",
+  "group": {
+    "id": "group:wakusei-tsushinsha",
+    "name": "惑星通信社",
+    "name_reading": "わくせいつうしんしゃ",
+    "name_english": "Wakusei Communications",
+    "abbreviation": "わくつー",
+    "category": "underground",
+    "sub_category": "trash-up",
+    "style": "王道青春系アイドル",
+    "label": "org:trash-up-records",
+    "base": "tokyo",
+    "status": "active",
+    "formation_context": {"type":"period-limited-unit","members_source":["group:trash-up-saka-sama","group:trash-up-dadadams"],"description":"TRASH-UP!! RECORDS所属グループ（SAKA-SAMA、ダダダムズ）メンバーを中心に期間限定ユニットとして結成"},
+    "naming_concept": {"author":"屑山屑男（プロデューサー）","description":"2000年代の頃の暇を持て余した女子高生が集まって何かおもしろいことをやろう！ってなって、とりあえず会社みたいな名前をつけて活動を始めた","costume_themes":"女子高生をイメージした制服"},
+    "musical_style": {"description":"TRASH-UP!! RECORDS過去グループ（あヴぁんだんど、innes等）のカバーも含めて歌唱","covers":["group:avandoned","group:innes"]},
+    "tags":["underground","trash-up-records","period-limited","school-uniform","王道青春系"],
+    "provenance":{"confidence":"high","verified":true,"verified_by":"human","sources":[{"url":"https://ja.wikipedia.org/wiki/惑星通信社","title":"惑星通信社 — Wikipedia","accessed_at":"2026-09-03"}]}
+  },
+  "label": {"id":"org:trash-up-records","name":"TRASH-UP!! RECORDS","groups":["group:trash-up-saka-sama","group:trash-up-dadadams","group:wakusei-tsushinsha","group:avandoned","group:innes"],"status":"inactive"}
+}
