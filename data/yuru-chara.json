@@ -1,0 +1,9 @@
+{
+  "title": "全国ご当地キャラクター100体・研究用テンプレート",
+  "updated": "2026-09-03",
+  "description": "自治体・地域・観光等に結びつくご当地キャラクター。『ゆるキャラ』は通称として使用し、公式名称・現役状況は個別確認が必要。",
+  "sources": ["https://gotouchi-chara.jp/category/pref/","https://www.zck.or.jp/site/local-mascot/","https://www.yurugp.jp/yvs/vote/prefectures","https://yuru-character.com/"],
+  "schema": {"id":"string (prefecture-city-number)","name":"string","reading":"string","prefecture":"string","city":"string","affiliation":"string (自治体名 or 商工会議所 etc)","debut":"YYYY","status":"active | retired | unknown","type":"animal | food | object | person | plant | other","designer":"string","concept":"string","sns":{"twitter":"url","instagram":"url","website":"url"},"awards":["string"],"notes":"string","sources":["string"],"verified":"boolean"},
+  "items": [{"id":"kumamoto-001","name":"くまモン","reading":"Kumamon","prefecture":"熊本県","city":"熊本市","affiliation":"熊本県","debut":"2011","status":"active","type":"animal","designer":"","concept":"熊本県のおじさんではない。くまです。","sns":{},"awards":["ゆるキャラグランプリ2011"],"notes":"唯一確認済みサンプルエントリ","sources":[],"verified":true}],
+  "_status":"テンプレート構造化完了。items[0]はくまモン（確認済み）。残り99体は順次追加・検証予定。"
+}
