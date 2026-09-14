@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/bonsai/idol-db/blob/main/schemas/acquisition-plan.schema.json",
+  "title": "AW Acquisition Plan",
+  "type": "object",
+  "required": ["seed_id", "search_domain", "queries", "methods", "locations"],
+  "properties": {
+    "seed_id": {"type": "string"},
+    "search_domain": {"type": "array", "items": {"type": "string"}},
+    "queries": {"type": "array", "items": {"type": "string"}},
+    "methods": {"type": "array", "items": {"type": "string"}},
+    "locations": {"type": "array", "items": {"type": "string"}},
+    "term_scores": {"type": "array", "items": {"type": "object"}},
+    "search_plan": {"type": "array", "items": {"type": "object"}},
+    "provenance": {"type": "object"}
+  },
+  "additionalProperties": false
+}
