@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/bonsai/idol-db/blob/main/schemas/decision-record.schema.json",
+  "title": "AW Decision Record",
+  "type": "object",
+  "required": ["seed_id", "decision_id", "need", "candidate_actions", "selected_action", "reason", "created_at"],
+  "properties": {
+    "seed_id": {"type": "string"},
+    "decision_id": {"type": "string"},
+    "need": {"type": "string"},
+    "candidate_actions": {"type": "array", "items": {"type": "object"}},
+    "selected_action": {"type": "object"},
+    "reason": {"type": "array", "items": {"type": "string"}},
+    "expected_gain": {"type": "number"},
+    "cost": {"type": "number"},
+    "risk": {"type": "number"},
+    "result": {"type": ["object", "null"]},
+    "next_seed": {"type": ["string", "null"]},
+    "created_at": {"type": "string", "format": "date-time"}
+  },
+  "additionalProperties": false
+}
