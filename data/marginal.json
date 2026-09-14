@@ -15,28 +15,11 @@
       "roles": ["artist", "animator", "performer", "singer", "dancer"],
       "tags": ["marginal", "boundary-case", "artist", "performance", "idol-research"],
       "sources": [
-        {
-          "url": "https://youtu.be/i8eU6EmaZz0?si=ZP0eLIFc1dlkcY2p",
-          "type": "user-provided-video",
-          "note": "登録候補としてユーザーが提示した動画"
-        },
-        {
-          "url": "https://note.com/shishi_yamazaki",
-          "type": "artist-profile",
-          "note": "本人noteプロフィール。アニメーション、陶芸、ダンス、歌などの活動を記載。"
-        },
-        {
-          "url": "https://www.excite.co.jp/news/dictionary/person/PEfc91c6842ec69b0fb30a68f9b1980066799b17bb/",
-          "type": "profile",
-          "note": "生年月日1989-09-14のプロフィール情報"
-        }
+        {"url": "https://youtu.be/i8eU6EmaZz0?si=ZP0eLIFc1dlkcY2p", "type": "user-provided-video", "note": "登録候補としてユーザーが提示した動画"},
+        {"url": "https://note.com/shishi_yamazaki", "type": "artist-profile", "note": "本人noteプロフィール。アニメーション、陶芸、ダンス、歌などの活動を記載。"},
+        {"url": "https://www.excite.co.jp/news/dictionary/person/PEfc91c6842ec69b0fb30a68f9b1980066799b17bb/", "type": "profile", "note": "生年月日1989-09-14のプロフィール情報"}
       ],
-      "provenance": {
-        "confidence": "medium",
-        "verified": false,
-        "verified_by": "human",
-        "last_verified_at": "2026-09-14"
-      }
+      "provenance": {"confidence": "medium", "verified": false, "verified_by": "human", "last_verified_at": "2026-09-14"}
     },
     {
       "id": "person:funira",
@@ -51,23 +34,34 @@
       "roles": ["fortune_teller", "bodyworker", "artist", "kekanoko_leader"],
       "tags": ["marginal", "boundary-case", "idol-culture", "former-idol-search"],
       "sources": [
-        {
-          "url": "https://note.com/funira",
-          "type": "personal-profile",
-          "note": "本人noteプロフィール・活動情報"
-        },
-        {
-          "url": "https://niewmedia.com/specials/grandmarquee52697/",
-          "type": "media-profile",
-          "note": "ケケノコ族および現在の活動に関するプロフィール"
-        }
+        {"url": "https://note.com/funira", "type": "personal-profile", "note": "本人noteプロフィール・活動情報"},
+        {"url": "https://niewmedia.com/specials/grandmarquee52697/", "type": "media-profile", "note": "ケケノコ族および現在の活動に関するプロフィール"}
       ],
-      "provenance": {
-        "confidence": "medium",
-        "verified": false,
-        "verified_by": "human",
-        "last_verified_at": "2026-09-14"
-      }
+      "provenance": {"confidence": "medium", "verified": false, "verified_by": "human", "last_verified_at": "2026-09-14"}
+    },
+    {
+      "id": "person:hoshino-michiru",
+      "label": "星野みちる",
+      "label_reading": "Hoshino Michiru",
+      "aliases": ["Michiru", "みちる", "五井道子"],
+      "status": "verified_former_idol",
+      "canonical_type": "person",
+      "idol_status": "former",
+      "ex_idol": true,
+      "former_idol": {
+        "group_ids": ["group:akb48"],
+        "active_period": {"start": "2005-12-08", "end": "2007-06-26"},
+        "role": ["AKB48 1期生", "旧チームA"]
+      },
+      "current_career": ["singer-songwriter", "musician", "label_founder"],
+      "birth_date": "1985-11-19",
+      "tags": ["ex-idol", "former-idol", "AKB48", "singer-songwriter"],
+      "sources": [
+        {"url": "https://hoshino-michiru.officialsite.co/pages/436631/biography", "type": "official-profile", "note": "本人公式Biography。2005年AKB48オープニングメンバー合格、2007年卒業。"},
+        {"url": "https://natalie.mu/music/artist/10778", "type": "music-profile", "note": "音楽ナタリー。AKB48 1期生、2007年6月卒業後シンガーソングライターへ。"},
+        {"url": "https://danro.bar/12325335-2/", "type": "interview", "note": "本人インタビュー。AKB48在籍・卒業理由と、その後のシンガーソングライター活動を確認。"}
+      ],
+      "provenance": {"confidence": "high", "verified": true, "verified_by": "human", "last_verified_at": "2026-09-14"}
     }
   ]
 }
