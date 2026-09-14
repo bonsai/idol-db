@@ -3,41 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Idol Feature Map — idol-db</title>
+<title>Idol Feature Matrix — idol-db</title>
 <style>
 :root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#202124;background:#f6f7f9}
-body{margin:0}main{max-width:1100px;margin:auto;padding:32px 20px 56px}header{margin-bottom:24px}h1{margin:0 0 8px;font-size:32px}p{color:#5f6368}.meta{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}.stat{background:#fff;border:1px solid #e1e4e8;border-radius:12px;padding:12px 16px}.card{background:#fff;border:1px solid #e1e4e8;border-radius:16px;padding:20px;margin:16px 0;box-shadow:0 2px 8px #00000008}.name{font-size:22px;font-weight:700}.id{font-size:12px;color:#6b7280}.axis{margin-top:18px}.axis h3{font-size:14px;margin:0 0 8px;color:#5f6368}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{display:inline-block;border-radius:999px;padding:5px 10px;background:#eef1f5;font-size:13px}.observed .chip{background:#e8f5e9}.inferred .chip{background:#fff3cd}.hypotheses .chip{background:#f3e8ff}.empty{color:#9aa0a6;font-size:13px}a{color:#1769aa;text-decoration:none}footer{margin-top:28px;font-size:13px;color:#6b7280}
+body{margin:0}main{max-width:1400px;margin:auto;padding:28px 18px 56px}h1{margin:0 0 6px;font-size:30px}p{color:#5f6368}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:18px 0}select{padding:8px 10px;border:1px solid #d5d9de;border-radius:8px;background:#fff}.stat{display:inline-block;background:#fff;border:1px solid #e1e4e8;border-radius:10px;padding:8px 12px;margin-right:8px}.matrix-wrap{overflow:auto;background:#fff;border:1px solid #dfe3e8;border-radius:14px}.matrix{border-collapse:collapse;min-width:900px;width:max-content}.matrix th,.matrix td{border:1px solid #e1e4e8;padding:8px 10px;text-align:center;vertical-align:middle}.matrix thead th{position:sticky;top:0;background:#f1f3f5;z-index:3}.matrix .person{position:sticky;left:0;background:#fff;text-align:left;z-index:2;min-width:130px}.matrix thead .person{z-index:4;background:#f1f3f5}.axis{font-size:12px;color:#5f6368}.feature{display:inline-block;border-radius:999px;padding:4px 7px;margin:2px;background:#e8f5e9;font-size:11px;white-space:nowrap}.feature.empty{background:#f5f6f7;color:#a0a5ab}.legend{margin-top:14px;font-size:13px;color:#6b7280}a{color:#1769aa;text-decoration:none}footer{margin-top:24px;font-size:13px;color:#6b7280}
 </style>
 </head>
 <body>
 <main>
 <header>
-<h1>Idol Feature Map</h1>
-<p>idol-db canonical → feature extraction → multi-axis feature map</p>
-<div class="meta" id="summary"></div>
-<p><a href="./feature-map.json">feature-map.json</a> · <a href="./idols.json">idols.json</a> · <a href="https://github.com/bonsai/idol-db">GitHub repository</a></p>
+<h1>Idol Feature Matrix</h1>
+<p>2D matrix: 行 = idol/person、列 = feature dimension。canonical の observed features を比較する。</p>
+<div id="summary"></div>
+<div class="toolbar"><label>表示軸 <select id="axis"></select></label><span class="stat">X = feature dimensions</span><span class="stat">Y = idols</span></div>
+<p><a href="./feature-map.json">feature-map.json</a> · <a href="./idols.json">idols.json</a> · <a href="https://github.com/bonsai/idol-db">GitHub</a></p>
 </header>
-<section id="map"></section>
-<footer>Canonical placement uses observed features. Inferred features and hypotheses are kept separate.</footer>
+<section class="matrix-wrap"><table class="matrix"><thead id="thead"></thead><tbody id="tbody"></tbody></table></section>
+<div class="legend">緑 = observed（canonical）。inferred / hypotheses は、この比較表には混ぜず別レイヤーとして保持。</div>
+<footer>Feature Map は固定カテゴリではなく、観測された特徴を多軸で比較するための matrix。</footer>
 </main>
 <script>
 const AXIS_LABELS={expression:"表現",body:"身体",performance:"パフォーマンス",relationship:"関係",identity:"アイドル・アイデンティティ",career:"キャリア",market:"市場",mobility:"移動",temporal:"時間",deviation:"逸脱"};
 const AXIS_ORDER=Object.keys(AXIS_LABELS);
+let fm=null,idols=null;
 const esc=s=>String(s??"").replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
-function chips(values,kind){if(!values?.length)return '<span class="empty">なし</span>';return `<div class="chips">${values.map(v=>`<span class="chip">${esc(v)}</span>`).join("")}</div>`}
-function axisSection(axis,values,kind="observed"){return `<div class="axis ${kind}"><h3>${esc(AXIS_LABELS[axis]||axis)}</h3>${chips(values,kind)}</div>`}
-async function load(){
- const [fm,idols]=await Promise.all([fetch('./feature-map.json',{cache:'no-store'}).then(r=>r.json()),fetch('./idols.json',{cache:'no-store'}).then(r=>r.json())]);
- const people=Object.fromEntries((idols.people||[]).map(x=>[x.id,x]));
- const entities=fm.entities||[];
- document.getElementById('summary').innerHTML=`<div class="stat"><b>${entities.length}</b> people</div><div class="stat"><b>${esc(fm.schema_version||"unknown")}</b> schema</div>`;
- document.getElementById('map').innerHTML=entities.map(e=>{
-  const p=people[e.id]||{}; const label=p.label||e.id.replace(/^person:/,'');
-  const observed=e.features?.observed||{}; const inferred=e.features?.inferred||{}; const hypotheses=e.features?.hypotheses||{};
-  return `<article class="card"><div class="name">${esc(label)}</div><div class="id">${esc(e.id)}</div>${AXIS_ORDER.map(a=>axisSection(a,observed[a],"observed")).join("")}${Object.values(inferred).some(v=>v?.length)?'<hr>'+AXIS_ORDER.map(a=>inferred[a]?.length?axisSection(a,inferred[a],"inferred"):"").join(""):""}${Object.values(hypotheses).some(v=>v?.length)?'<hr>'+AXIS_ORDER.map(a=>hypotheses[a]?.length?axisSection(a,hypotheses[a],"hypotheses"):"").join(""):""}</article>`
- }).join("");
+function allDimensions(axis){const set=new Set();for(const e of fm.entities||[])for(const d of e.features?.observed?.[axis]||[])set.add(d);return [...set].sort()}
+function render(){
+ const axis=document.getElementById('axis').value;const dims=allDimensions(axis);const people=Object.fromEntries((idols.people||[]).map(p=>[p.id,p]));
+ document.getElementById('thead').innerHTML=`<tr><th class="person">idol</th>${dims.map(d=>`<th><div class="axis">${esc(d)}</div></th>`).join('')}</tr>`;
+ document.getElementById('tbody').innerHTML=(fm.entities||[]).map(e=>{const p=people[e.id]||{};const vals=new Set(e.features?.observed?.[axis]||[]);return `<tr><th class="person">${esc(p.label||e.id.replace(/^person:/,''))}<br><span class="axis">${esc(e.id)}</span></th>${dims.map(d=>`<td>${vals.has(d)?`<span class="feature">●</span>`:'<span class="feature empty">·</span>'}</td>`).join('')}</tr>`}).join('');
 }
-load().catch(err=>document.getElementById('map').innerHTML=`<div class="card">読み込みに失敗しました: ${esc(err.message)}</div>`);
+async function load(){
+ [fm,idols]=await Promise.all([fetch('./feature-map.json',{cache:'no-store'}).then(r=>r.json()),fetch('./idols.json',{cache:'no-store'}).then(r=>r.json())]);
+ document.getElementById('summary').innerHTML=`<span class="stat"><b>${(fm.entities||[]).length}</b> people</span><span class="stat"><b>${esc(fm.schema_version||'unknown')}</b> schema</span>`;
+ const select=document.getElementById('axis');select.innerHTML=AXIS_ORDER.map(a=>`<option value="${a}">${esc(AXIS_LABELS[a])}</option>`).join('');select.value='identity';select.onchange=render;render();
+}
+load().catch(err=>document.getElementById('tbody').innerHTML=`<tr><td colspan="20">読み込みに失敗しました: ${esc(err.message)}</td></tr>`);
 </script>
 </body>
 </html>
