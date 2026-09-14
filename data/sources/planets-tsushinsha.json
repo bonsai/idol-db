@@ -1,0 +1,18 @@
+{
+  "source_id": "planets-tsushinsha",
+  "type": "web",
+  "source_url": "https://wakusei2.wixsite.com/tsushinsha",
+  "capabilities": ["html", "structured_data"],
+  "access": {
+    "robots": "unknown",
+    "api": "unknown",
+    "rate_limit": "unknown"
+  },
+  "freshness": "unknown",
+  "provenance_quality": "medium",
+  "reproducibility": "medium",
+  "cost": "low",
+  "risk": "medium",
+  "methods": ["structured_data", "crawler", "manual"],
+  "retrieved_at": "2026-09-14"
+}
