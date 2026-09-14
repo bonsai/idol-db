@@ -1,6 +1,6 @@
 {
-  "_description": "Archetype / canonical example for an individual idol entry in idol-lab. Use this structure for new records; fields with `*` are required.",
-  "_schema_version": "2026-09-03",
+  "_description": "Canonical structured idol activity records. Current/former labels are derived from activity history; they are not fundamental person types.",
+  "_schema_version": "2026-09-14",
   "_id_prefix": "person:",
   "entries": [
     {
@@ -11,10 +11,7 @@
       "aliases": ["類家あすか"],
       "group": "group:example-group",
       "agency": "org:example-agency",
-      "active_period": {
-        "start": "2010-01",
-        "end": "2015-12"
-      },
+      "active_period": {"start": "2010-01", "end": "2015-12"},
       "era": ["2010s"],
       "region": "tokyo",
       "gender": "female",
@@ -26,21 +23,54 @@
       "description": "樽ドルという逸脱カテゴリの原点的人物。身体規範とアイドル規範の交差点に位置づけられる。",
       "iconic_works": ["song:example-song"],
       "related_ids": ["genre:tardol"],
-      "sources": [
-        {
-          "url": "https://example.com/source",
-          "title": "出典タイトル",
-          "publisher": "出版社名",
-          "published_at": "2026-01-01",
-          "accessed_at": "2026-09-03"
-        }
+      "sources": [{"url": "https://example.com/source", "title": "出典タイトル", "publisher": "出版社名", "published_at": "2026-01-01", "accessed_at": "2026-09-03"}],
+      "provenance": {"confidence": "high", "verified": true, "verified_by": "human", "last_verified_at": "2026-09-03"}
+    },
+    {
+      "id": "person:hayakawa-momo",
+      "type": "person",
+      "label": "早河もも",
+      "label_reading": "Hayakawa Momo",
+      "group": "group:hai-doomo-terasma",
+      "active_period": {"start": null, "end": null},
+      "activities": [
+        {"type": "idol", "group": "group:hai-doomo-terasma", "status": "active", "role": ["member", "white担当"]},
+        {"type": "comedian", "unit": "キュウダイテン", "status": "active"}
       ],
-      "provenance": {
-        "confidence": "high",
-        "verified": true,
-        "verified_by": "human",
-        "last_verified_at": "2026-09-03"
-      }
+      "era": ["2020s"],
+      "region": "tokyo",
+      "gender": "female",
+      "birth_date": "unknown-12-25",
+      "tags": ["idol", "comedy", "terasma", "k-pro"],
+      "roles": ["idol", "comedian", "performer"],
+      "description": "K-PROプロデュースのアイドルグループ『はいどーも！テラスマです！』のメンバー。白色担当。アイドルとお笑いを横断して活動する。",
+      "sources": [
+        {"url": "https://kpro-web.com/performers/4293/", "title": "はいどーも！テラスマです！", "publisher": "K-PRO", "accessed_at": "2026-09-14"},
+        {"url": "https://idolwatch.jp/group/2424", "title": "はいどーも！テラスマです！", "publisher": "IDOL Watch", "accessed_at": "2026-09-14"},
+        {"url": "https://fantia.jp/fanclubs/529032?locale=jp", "title": "ももファーム", "publisher": "Fantia", "accessed_at": "2026-09-14"}
+      ],
+      "provenance": {"confidence": "high", "verified": true, "verified_by": "human", "last_verified_at": "2026-09-14"}
+    },
+    {
+      "id": "person:saegusa-urara",
+      "type": "person",
+      "label": "冴草うらら",
+      "label_reading": "Saegusa Urara",
+      "activities": [
+        {"type": "idol", "group": "group:dadadams", "status": "ended", "evidence_label": "ex. ダダダムズ"},
+        {"type": "idol", "group": "group:saka-sama", "start": "2026-07", "status": "active", "role": ["member"]}
+      ],
+      "era": ["2020s"],
+      "region": "tokyo",
+      "gender": "female",
+      "tags": ["idol", "saka-sama", "dadadams", "activity-transition"],
+      "roles": ["idol", "performer"],
+      "description": "ダダダムズでの活動を経て、2026年7月にSAKA-SAMAへ加入。current/formerを固定属性にせず、idol activityの履歴として記録する遷移事例。",
+      "sources": [
+        {"url": "https://www.musicite.net/news/saka-sama-yukkyun", "title": "SAKA-SAMAがゆっきゅん作詞の新曲発表", "publisher": "IDOL CROSSING", "published_at": "2026-08-24", "accessed_at": "2026-09-14"},
+        {"url": "https://news.joysound.com/article/685704", "title": "SAKA-SAMAが新曲発表", "publisher": "JOYSOUND 音楽ニュース", "published_at": "2026-08-19", "accessed_at": "2026-09-14"}
+      ],
+      "provenance": {"confidence": "high", "verified": true, "verified_by": "human", "last_verified_at": "2026-09-14"}
     }
   ]
 }
