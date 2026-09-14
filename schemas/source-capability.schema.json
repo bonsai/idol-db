@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/bonsai/idol-db/blob/main/schemas/source-capability.schema.json",
+  "title": "Source Capability",
+  "type": "object",
+  "required": ["source_id", "capabilities", "access"],
+  "properties": {
+    "source_id": {"type": "string"},
+    "capabilities": {
+      "type": "array",
+      "items": {"enum": ["api", "html", "rss", "sitemap", "structured_data", "repository", "archive", "manual"]}
+    },
+    "access": {
+      "type": "object",
+      "properties": {
+        "robots": {"enum": ["allowed", "denied", "unknown"]},
+        "api": {"enum": ["available", "unavailable", "unknown"]},
+        "rate_limit": {"type": ["string", "number", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "freshness": {"type": "number"},
+        "provenance_quality": {"type": "number"},
+        "reproducibility": {"type": "number"},
+        "cost": {"type": "number"},
+        "risk": {"type": "number"}
+      },
+      "additionalProperties": false
+    },
+    "methods": {"type": "array", "items": {"type": "string"}},
+    "source_url": {"type": "string", "format": "uri"},
+    "retrieved_at": {"type": "string", "format": "date-time"}
+  },
+  "additionalProperties": false
+}
