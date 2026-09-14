@@ -1,0 +1,10 @@
+{
+  "seed_id": "agentic-acquisition-poc-001",
+  "entity": "惑星通信社",
+  "topic": "アイドル活動・人物・関係性",
+  "unknowns": ["公開情報から取得可能な活動・関係性の更新"],
+  "constraints": {
+    "respect_robots": true,
+    "prefer_structured_access": true
+  }
+}
