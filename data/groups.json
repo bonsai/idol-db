@@ -1,0 +1,49 @@
+{
+  "_description": "Canonical group map. Groups are separate from the person map and connected through relations.",
+  "_schema_version": "2026-09-14",
+  "_id_prefix": "group:",
+  "entries": [
+    {
+      "id": "group:hai-doomo-terasma",
+      "type": "idol-group",
+      "label": "はいどーも！テラスマです！",
+      "aliases": ["テラスマ"],
+      "region": "tokyo",
+      "members": ["person:hayakawa-momo"],
+      "sources": [{"url": "https://kpro-web.com/performers/4293/", "publisher": "K-PRO", "accessed_at": "2026-09-14"}],
+      "provenance": {"confidence": "high", "verified": true, "verified_by": "human", "last_verified_at": "2026-09-14"}
+    },
+    {
+      "id": "group:dadadams",
+      "type": "idol-group",
+      "label": "ダダダムズ",
+      "region": "tokyo",
+      "members": ["person:saegusa-urara"],
+      "provenance": {"confidence": "medium", "verified": true, "verified_by": "human", "last_verified_at": "2026-09-14"}
+    },
+    {
+      "id": "group:saka-sama",
+      "type": "idol-group",
+      "label": "SAKA-SAMA",
+      "region": "tokyo",
+      "members": ["person:saegusa-urara"],
+      "active_period": {"start": "2026-07", "end": null},
+      "sources": [{"url": "https://www.musicite.net/news/saka-sama-yukkyun", "publisher": "IDOL CROSSING", "accessed_at": "2026-09-14"}],
+      "provenance": {"confidence": "high", "verified": true, "verified_by": "human", "last_verified_at": "2026-09-14"}
+    },
+    {
+      "id": "group:l-nan",
+      "type": "idol-group",
+      "label": "Lって何のLですか？",
+      "aliases": ["Lなん", "えるなん"],
+      "region": "tokyo",
+      "member_count": 6,
+      "members": ["person:yohane-runa"],
+      "sources": [
+        {"url": "https://ladypromotion.online/code-l", "publisher": "LadyPromotion", "published_at": "2023-10-29", "accessed_at": "2026-09-14"},
+        {"url": "https://tiget.net/users", "publisher": "TIGET", "accessed_at": "2026-09-14"}
+      ],
+      "provenance": {"confidence": "high", "verified": true, "verified_by": "human", "last_verified_at": "2026-09-14"}
+    }
+  ]
+}
