@@ -29,7 +29,7 @@ jobs:
         run: |
           python aw/acquisition_runner.py < data/work/acquisition-plan.json > data/work/acquisition-result.json
 
-      - name: Persist run record
+      - name: Persist run record and evidence
         run: |
           run_id=$(python - <<'PY'
           import json
@@ -39,6 +39,15 @@ jobs:
           mkdir -p "data/work/runs/$run_id"
           cp data/work/acquisition-plan.json "data/work/runs/$run_id/decision.json"
           cp data/work/acquisition-result.json "data/work/runs/$run_id/result.json"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          result = json.load(open('data/work/acquisition-result.json'))
+          run_dir = Path('data/work/runs') / result['run_id']
+          with (run_dir / 'evidence.jsonl').open('w', encoding='utf-8') as f:
+              for item in result.get('evidence', []):
+                  f.write(json.dumps(item, ensure_ascii=False) + '\n')
+          PY
 
       - name: Commit run record
         run: |
