@@ -1,0 +1,40 @@
+version: "0.1"
+label: "Idol Feature Map"
+principle: "Classify observable features and positions, not fixed person types."
+axes:
+  expression:
+    label: "表現"
+    dimensions: [vocal, dance, acting, comedy, art, language, character]
+  body:
+    label: "身体"
+    dimensions: [visual, costume, body_expression, gender_expression, norm_deviation]
+  performance:
+    label: "パフォーマンス"
+    dimensions: [live, contact, streaming, sns, content_creation]
+  relationship:
+    label: "関係"
+    dimensions: [fan_proximity, group_relation, collaboration, community]
+  identity:
+    label: "アイドル・アイデンティティ"
+    dimensions: [mainstream, underground, alternative, conceptual, local, cross_boundary]
+  career:
+    label: "キャリア"
+    dimensions: [idol_only, comedian, actor, artist, writer, entrepreneur, multi_role]
+  market:
+    label: "市場"
+    dimensions: [cheki, live, streaming, subscription, goods, fanclub, advertising]
+  mobility:
+    label: "移動"
+    dimensions: [join, graduate, transfer, rename, rejoin, solo]
+  temporal:
+    label: "時間"
+    dimensions: [active, former, transition, intermittent]
+  deviation:
+    label: "逸脱"
+    dimensions: [body, career, expression, relationship, institution, market]
+model:
+  entity: person
+  evidence_layers: [observed, inferred, hypothesis]
+  rule: "Only observed features may be used for canonical placement; inferred features must remain explicitly marked."
+  coordinates: "multi-axis categorical"
+  note: "2D numeric coordinates are intentionally deferred until empirical data supports a meaningful distance model."
