@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Idol Feature Map — idol-db</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#202124;background:#f6f7f9}
+body{margin:0}main{max-width:1100px;margin:auto;padding:32px 20px 56px}header{margin-bottom:24px}h1{margin:0 0 8px;font-size:32px}p{color:#5f6368}.meta{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}.stat{background:#fff;border:1px solid #e1e4e8;border-radius:12px;padding:12px 16px}.card{background:#fff;border:1px solid #e1e4e8;border-radius:16px;padding:20px;margin:16px 0;box-shadow:0 2px 8px #00000008}.name{font-size:22px;font-weight:700}.id{font-size:12px;color:#6b7280}.axis{margin-top:18px}.axis h3{font-size:14px;margin:0 0 8px;color:#5f6368}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{display:inline-block;border-radius:999px;padding:5px 10px;background:#eef1f5;font-size:13px}.observed .chip{background:#e8f5e9}.inferred .chip{background:#fff3cd}.hypotheses .chip{background:#f3e8ff}.empty{color:#9aa0a6;font-size:13px}a{color:#1769aa;text-decoration:none}footer{margin-top:28px;font-size:13px;color:#6b7280}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>Idol Feature Map</h1>
+<p>idol-db canonical → feature extraction → multi-axis feature map</p>
+<div class="meta" id="summary"></div>
+<p><a href="./feature-map.json">feature-map.json</a> · <a href="./idols.json">idols.json</a> · <a href="https://github.com/bonsai/idol-db">GitHub repository</a></p>
+</header>
+<section id="map"></section>
+<footer>Canonical placement uses observed features. Inferred features and hypotheses are kept separate.</footer>
+</main>
+<script>
+const AXIS_LABELS={expression:"表現",body:"身体",performance:"パフォーマンス",relationship:"関係",identity:"アイドル・アイデンティティ",career:"キャリア",market:"市場",mobility:"移動",temporal:"時間",deviation:"逸脱"};
+const AXIS_ORDER=Object.keys(AXIS_LABELS);
+const esc=s=>String(s??"").replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
+function chips(values,kind){if(!values?.length)return '<span class="empty">なし</span>';return `<div class="chips">${values.map(v=>`<span class="chip">${esc(v)}</span>`).join("")}</div>`}
+function axisSection(axis,values,kind="observed"){return `<div class="axis ${kind}"><h3>${esc(AXIS_LABELS[axis]||axis)}</h3>${chips(values,kind)}</div>`}
+async function load(){
+ const [fm,idols]=await Promise.all([fetch('./feature-map.json',{cache:'no-store'}).then(r=>r.json()),fetch('./idols.json',{cache:'no-store'}).then(r=>r.json())]);
+ const people=Object.fromEntries((idols.people||[]).map(x=>[x.id,x]));
+ const entities=fm.entities||[];
+ document.getElementById('summary').innerHTML=`<div class="stat"><b>${entities.length}</b> people</div><div class="stat"><b>${esc(fm.schema_version||"unknown")}</b> schema</div>`;
+ document.getElementById('map').innerHTML=entities.map(e=>{
+  const p=people[e.id]||{}; const label=p.label||e.id.replace(/^person:/,'');
+  const observed=e.features?.observed||{}; const inferred=e.features?.inferred||{}; const hypotheses=e.features?.hypotheses||{};
+  return `<article class="card"><div class="name">${esc(label)}</div><div class="id">${esc(e.id)}</div>${AXIS_ORDER.map(a=>axisSection(a,observed[a],"observed")).join("")}${Object.values(inferred).some(v=>v?.length)?'<hr>'+AXIS_ORDER.map(a=>inferred[a]?.length?axisSection(a,inferred[a],"inferred"):"").join(""):""}${Object.values(hypotheses).some(v=>v?.length)?'<hr>'+AXIS_ORDER.map(a=>hypotheses[a]?.length?axisSection(a,hypotheses[a],"hypotheses"):"").join(""):""}</article>`
+ }).join("");
+}
+load().catch(err=>document.getElementById('map').innerHTML=`<div class="card">読み込みに失敗しました: ${esc(err.message)}</div>`);
+</script>
+</body>
+</html>
