@@ -4,71 +4,31 @@
   "_id_prefix": "person:",
   "entries": [
     {
-      "id": "person:ruike-asuka",
-      "type": "idol",
-      "label": "類家明日香",
-      "label_reading": "Ruike Asuka",
-      "aliases": ["類家あすか"],
-      "group": "group:example-group",
-      "agency": "org:example-agency",
-      "active_period": {"start": "2010-01", "end": "2015-12"},
-      "era": ["2010s"],
-      "region": "tokyo",
-      "gender": "female",
-      "birth_year": 1990,
-      "debut_age": 20,
-      "tags": ["tardol", "underground", "conceptual"],
-      "deviation_axes": ["body-shape", "career", "expression"],
-      "roles": ["vocal", "performer"],
-      "description": "樽ドルという逸脱カテゴリの原点的人物。身体規範とアイドル規範の交差点に位置づけられる。",
-      "iconic_works": ["song:example-song"],
-      "related_ids": ["genre:tardol"],
-      "sources": [{"url": "https://example.com/source", "title": "出典タイトル", "publisher": "出版社名", "published_at": "2026-01-01", "accessed_at": "2026-09-03"}],
-      "provenance": {"confidence": "high", "verified": true, "verified_by": "human", "last_verified_at": "2026-09-03"}
+      "id": "person:ruike-asuka", "type": "idol", "label": "類家明日香", "label_reading": "Ruike Asuka", "aliases": ["類家あすか"], "group": "group:example-group", "agency": "org:example-agency", "active_period": {"start": "2010-01", "end": "2015-12"}, "era": ["2010s"], "region": "tokyo", "gender": "female", "birth_year": 1990, "debut_age": 20, "tags": ["tardol", "underground", "conceptual"], "deviation_axes": ["body-shape", "career", "expression"], "roles": ["vocal", "performer"], "description": "樽ドルという逸脱カテゴリの原点的人物。身体規範とアイドル規範の交差点に位置づけられる。", "iconic_works": ["song:example-song"], "related_ids": ["genre:tardol"], "sources": [{"url": "https://example.com/source", "title": "出典タイトル", "publisher": "出版社名", "published_at": "2026-01-01", "accessed_at": "2026-09-03"}], "provenance": {"confidence": "high", "verified": true, "verified_by": "human", "last_verified_at": "2026-09-03"}
     },
     {
-      "id": "person:hayakawa-momo",
+      "id": "person:hayakawa-momo", "type": "person", "label": "早河もも", "label_reading": "Hayakawa Momo", "group": "group:hai-doomo-terasma", "active_period": {"start": null, "end": null}, "activities": [{"type": "idol", "group": "group:hai-doomo-terasma", "status": "active", "role": ["member", "white担当"]}, {"type": "comedian", "unit": "キュウダイテン", "status": "active"}], "era": ["2020s"], "region": "tokyo", "gender": "female", "birth_date": "unknown-12-25", "tags": ["idol", "comedy", "terasma", "k-pro"], "roles": ["idol", "comedian", "performer"], "description": "K-PROプロデュースのアイドルグループ『はいどーも！テラスマです！』のメンバー。白色担当。アイドルとお笑いを横断して活動する。", "sources": [{"url": "https://kpro-web.com/performers/4293/", "title": "はいどーも！テラスマです！", "publisher": "K-PRO", "accessed_at": "2026-09-14"}, {"url": "https://idolwatch.jp/group/2424", "title": "はいどーも！テラスマです！", "publisher": "IDOL Watch", "accessed_at": "2026-09-14"}], "provenance": {"confidence": "high", "verified": true, "verified_by": "human", "last_verified_at": "2026-09-14"}
+    },
+    {
+      "id": "person:saegusa-urara", "type": "person", "label": "冴草うらら", "label_reading": "Saegusa Urara", "activities": [{"type": "idol", "group": "group:dadadams", "status": "ended", "evidence_label": "ex. ダダダムズ"}, {"type": "idol", "group": "group:saka-sama", "start": "2026-07", "status": "active", "role": ["member"]}], "era": ["2020s"], "region": "tokyo", "gender": "female", "tags": ["idol", "saka-sama", "dadadams", "activity-transition"], "roles": ["idol", "performer"], "description": "ダダダムズでの活動を経て、2026年7月にSAKA-SAMAへ加入。current/formerを固定属性にせず、idol activityの履歴として記録する遷移事例。", "sources": [{"url": "https://www.musicite.net/news/saka-sama-yukkyun", "publisher": "IDOL CROSSING", "accessed_at": "2026-09-14"}], "provenance": {"confidence": "high", "verified": true, "verified_by": "human", "last_verified_at": "2026-09-14"}
+    },
+    {
+      "id": "person:yohane-runa",
       "type": "person",
-      "label": "早河もも",
-      "label_reading": "Hayakawa Momo",
-      "group": "group:hai-doomo-terasma",
-      "active_period": {"start": null, "end": null},
-      "activities": [
-        {"type": "idol", "group": "group:hai-doomo-terasma", "status": "active", "role": ["member", "white担当"]},
-        {"type": "comedian", "unit": "キュウダイテン", "status": "active"}
-      ],
+      "label": "夜羽音ルナ",
+      "label_reading": "Yohane Runa",
+      "aliases": ["よはねルナ", "夜羽音(よはね)ルナ", "えるなん"],
+      "activities": [{"type": "idol", "group": "group:l-nan", "status": "active", "role": ["member"]}],
       "era": ["2020s"],
       "region": "tokyo",
       "gender": "female",
-      "birth_date": "unknown-12-25",
-      "tags": ["idol", "comedy", "terasma", "k-pro"],
-      "roles": ["idol", "comedian", "performer"],
-      "description": "K-PROプロデュースのアイドルグループ『はいどーも！テラスマです！』のメンバー。白色担当。アイドルとお笑いを横断して活動する。",
-      "sources": [
-        {"url": "https://kpro-web.com/performers/4293/", "title": "はいどーも！テラスマです！", "publisher": "K-PRO", "accessed_at": "2026-09-14"},
-        {"url": "https://idolwatch.jp/group/2424", "title": "はいどーも！テラスマです！", "publisher": "IDOL Watch", "accessed_at": "2026-09-14"},
-        {"url": "https://fantia.jp/fanclubs/529032?locale=jp", "title": "ももファーム", "publisher": "Fantia", "accessed_at": "2026-09-14"}
-      ],
-      "provenance": {"confidence": "high", "verified": true, "verified_by": "human", "last_verified_at": "2026-09-14"}
-    },
-    {
-      "id": "person:saegusa-urara",
-      "type": "person",
-      "label": "冴草うらら",
-      "label_reading": "Saegusa Urara",
-      "activities": [
-        {"type": "idol", "group": "group:dadadams", "status": "ended", "evidence_label": "ex. ダダダムズ"},
-        {"type": "idol", "group": "group:saka-sama", "start": "2026-07", "status": "active", "role": ["member"]}
-      ],
-      "era": ["2020s"],
-      "region": "tokyo",
-      "gender": "female",
-      "tags": ["idol", "saka-sama", "dadadams", "activity-transition"],
+      "tags": ["idol", "l-nan", "地下アイドル"],
       "roles": ["idol", "performer"],
-      "description": "ダダダムズでの活動を経て、2026年7月にSAKA-SAMAへ加入。current/formerを固定属性にせず、idol activityの履歴として記録する遷移事例。",
+      "description": "『Lって何のLですか？』（Lなん／えるなん）のメンバー。本人SNSでは『東京あいどる』として活動を案内している。",
       "sources": [
-        {"url": "https://www.musicite.net/news/saka-sama-yukkyun", "title": "SAKA-SAMAがゆっきゅん作詞の新曲発表", "publisher": "IDOL CROSSING", "published_at": "2026-08-24", "accessed_at": "2026-09-14"},
-        {"url": "https://news.joysound.com/article/685704", "title": "SAKA-SAMAが新曲発表", "publisher": "JOYSOUND 音楽ニュース", "published_at": "2026-08-19", "accessed_at": "2026-09-14"}
+        {"url": "https://x.com/lnan_luna", "title": "夜羽音(よはね)ルナ【えるなん】", "publisher": "X", "accessed_at": "2026-09-14"},
+        {"url": "https://www.tiktok.com/@lnan_luna", "title": "よはねルナ", "publisher": "TikTok", "accessed_at": "2026-09-14"},
+        {"url": "https://tiget.net/users", "title": "【公式】Lって何のLですか？(Lなん)", "publisher": "TIGET", "accessed_at": "2026-09-14"}
       ],
       "provenance": {"confidence": "high", "verified": true, "verified_by": "human", "last_verified_at": "2026-09-14"}
     }
