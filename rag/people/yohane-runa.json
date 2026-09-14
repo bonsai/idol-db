@@ -1,0 +1,16 @@
+{
+  "entity_id": "person:yohane-runa",
+  "label": "夜羽音ルナ",
+  "aliases": ["よはねルナ", "夜羽音(よはね)ルナ", "えるなん"],
+  "entity_type": "person",
+  "summary": "東京拠点の女性アイドルグループ『Lって何のLですか？』（Lなん／えるなん）のメンバー。",
+  "facts": [
+    {"claim": "Lって何のLですか？は東京拠点6人組女性アイドルグループ", "source": "https://tiget.net/users", "accessed_at": "2026-09-14"},
+    {"claim": "夜羽音ルナはLなんのメンバーとして案内されている", "source": "https://x.com/lnan_luna", "accessed_at": "2026-09-14"},
+    {"claim": "本人TikTokは『東京あいどる』と活動を案内している", "source": "https://www.tiktok.com/@lnan_luna", "accessed_at": "2026-09-14"}
+  ],
+  "relations": [{"type": "member_of", "target": "group:l-nan"}],
+  "research_tags": ["idol", "underground-idol", "l-nan", "identity-resolution"],
+  "promotion": "canonical",
+  "retrieved_at": "2026-09-14"
+}
