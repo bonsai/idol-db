@@ -1,0 +1,51 @@
+{
+  "_schema_version": "0.1",
+  "_description": "Multi-axis feature map for idol activity. Features are evidence-backed; current/former status is derived from activity history.",
+  "coordinate_system": "multi-axis categorical",
+  "entities": [
+    {
+      "id": "person:hayakawa-momo",
+      "features": {
+        "observed": {
+          "expression": ["comedy", "character"],
+          "performance": ["live", "sns"],
+          "identity": ["underground"],
+          "career": ["multi_role", "comedian"],
+          "temporal": ["active"],
+          "deviation": ["career", "expression"]
+        },
+        "inferred": {},
+        "hypotheses": []
+      },
+      "evidence": ["idol-db:data/idols.json:person:hayakawa-momo"]
+    },
+    {
+      "id": "person:saegusa-urara",
+      "features": {
+        "observed": {
+          "performance": ["live"],
+          "identity": ["underground"],
+          "mobility": ["transfer", "join"],
+          "temporal": ["transition", "active"],
+          "deviation": ["institution"]
+        },
+        "inferred": {},
+        "hypotheses": []
+      },
+      "evidence": ["idol-db:data/idols.json:person:saegusa-urara"]
+    },
+    {
+      "id": "person:yohane-runa",
+      "features": {
+        "observed": {
+          "performance": ["sns"],
+          "identity": ["underground"],
+          "temporal": ["active"]
+        },
+        "inferred": {},
+        "hypotheses": []
+      },
+      "evidence": ["idol-db:data/idols.json:person:yohane-runa"]
+    }
+  ]
+}
