@@ -1,0 +1,18 @@
+{
+  "source_id": "idolwatch",
+  "type": "web",
+  "source_url": "https://idolwatch.jp/",
+  "capabilities": ["html"],
+  "access": {
+    "robots": "denied",
+    "api": "unknown",
+    "rate_limit": "unknown"
+  },
+  "freshness": "unknown",
+  "provenance_quality": "medium",
+  "reproducibility": "low",
+  "cost": "medium",
+  "risk": "medium",
+  "methods": ["rss", "sitemap", "structured_data", "crawler", "manual"],
+  "retrieved_at": "2026-09-14"
+}
