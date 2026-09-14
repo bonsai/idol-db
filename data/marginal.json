@@ -1,0 +1,42 @@
+{
+  "_description": "Marginal / boundary cases for idol research. These records are intentionally not canonical idol facts until idol status is verified.",
+  "_schema_version": "2026-09-14",
+  "entries": [
+    {
+      "id": "person:shishi-yamazaki",
+      "label": "シシヤマザキ",
+      "label_reading": "ShiShi Yamazaki",
+      "aliases": ["ShiShi Yamazaki", "ヤマザキシシ"],
+      "status": "marginal",
+      "canonical_type": "artist",
+      "idol_status": "unverified",
+      "reason": "アーティストとしての活動が確認できる一方、アイドルとしての分類は未検証。歌・ダンス・パフォーマンス等を含むため、アイドル概念の境界事例として保存する。",
+      "birth_date": "1989-09-14",
+      "roles": ["artist", "animator", "performer", "singer", "dancer"],
+      "tags": ["marginal", "boundary-case", "artist", "performance", "idol-research"],
+      "sources": [
+        {
+          "url": "https://youtu.be/i8eU6EmaZz0?si=ZP0eLIFc1dlkcY2p",
+          "type": "user-provided-video",
+          "note": "登録候補としてユーザーが提示した動画"
+        },
+        {
+          "url": "https://note.com/shishi_yamazaki",
+          "type": "artist-profile",
+          "note": "本人noteプロフィール。アニメーション、陶芸、ダンス、歌などの活動を記載。"
+        },
+        {
+          "url": "https://www.excite.co.jp/news/dictionary/person/PEfc91c6842ec69b0fb30a68f9b1980066799b17bb/",
+          "type": "profile",
+          "note": "生年月日1989-09-14のプロフィール情報"
+        }
+      ],
+      "provenance": {
+        "confidence": "medium",
+        "verified": false,
+        "verified_by": "human",
+        "last_verified_at": "2026-09-14"
+      }
+    }
+  ]
+}
