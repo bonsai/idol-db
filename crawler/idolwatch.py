@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Fetch public IDOL Watch event pages and emit normalized JSONL."""
+"""Fetch public IDOL Watch event pages and emit normalized JSONL.
+
+The crawler must respect robots.txt. A disallowed path is a normal skip,
+not a workflow failure; the existing canonical dataset is left untouched.
+"""
 from __future__ import annotations
 import json, re, time
 from datetime import datetime, timezone
@@ -14,13 +18,16 @@ LIVE = urljoin(BASE, "live")
 OUT = Path("data/idolwatch.jsonl")
 UA = "idol-db-crawler/1.0 (+https://github.com/bonsai/idol-db)"
 
+
 def allowed(url: str) -> bool:
     rp = RobotFileParser(urljoin(BASE, "robots.txt"))
     try:
         rp.read()
         return rp.can_fetch(UA, url)
-    except Exception:
+    except Exception as exc:
+        print(f"robots.txt could not be read: {exc}")
         return False
+
 
 def get(url: str, session: requests.Session) -> str:
     r = session.get(url, headers={"User-Agent": UA}, timeout=20)
@@ -28,10 +35,12 @@ def get(url: str, session: requests.Session) -> str:
     r.encoding = r.apparent_encoding or r.encoding
     return r.text
 
+
 def clean(s: str | None) -> str | None:
     if not s:
         return None
     return re.sub(r"\s+", " ", s).strip() or None
+
 
 def parse_event(url: str, html: str) -> dict:
     soup = BeautifulSoup(html, "html.parser")
@@ -51,6 +60,7 @@ def parse_event(url: str, html: str) -> dict:
         "retrieved_at": datetime.now(timezone.utc).isoformat()
     }
 
+
 def discover_event_links(html: str) -> list[str]:
     soup = BeautifulSoup(html, "html.parser")
     return sorted({urljoin(BASE, a["href"]).split("#", 1)[0]
@@ -58,9 +68,14 @@ def discover_event_links(html: str) -> list[str]:
                    if urljoin(BASE, a["href"]).startswith(BASE)
                    and "/live/" in urljoin(BASE, a["href"]).rstrip("/")})
 
+
 def main() -> None:
+    # robots.txt is authoritative. Do not bypass a disallowed path.
     if not allowed(LIVE):
-        raise SystemExit("robots.txt does not allow the crawler for /live")
+        print(f"SKIP: robots.txt does not allow crawling {LIVE}")
+        print("No IDOL Watch records were fetched; preserving existing data.")
+        return
+
     session = requests.Session()
     html = get(LIVE, session)
     urls = discover_event_links(html)
@@ -69,15 +84,18 @@ def main() -> None:
     for url in urls:
         try:
             if not allowed(url):
+                print(f"skip disallowed URL: {url}")
                 continue
             records.append(parse_event(url, get(url, session)))
             time.sleep(1.0)
         except requests.RequestException as e:
             print(f"skip {url}: {e}")
+
     with OUT.open("w", encoding="utf-8") as f:
         for record in records:
             f.write(json.dumps(record, ensure_ascii=False) + "\n")
     print(f"wrote {len(records)} records to {OUT}")
+
 
 if __name__ == "__main__":
     main()
