@@ -1,0 +1,17 @@
+{
+  "seed_id": "seed:example",
+  "search_domain": ["entity", "activity", "media"],
+  "queries": ["アマレテラス 惑星通信社"],
+  "sources": [
+    {
+      "source_id": "planets-tsushinsha",
+      "source_url": "https://wakusei2.wixsite.com/tsushinsha",
+      "methods": ["structured_data", "crawler", "manual"],
+      "access": {"robots": "unknown"},
+      "provenance_quality_score": 0.7,
+      "freshness_score": 0.5
+    }
+  ],
+  "locations": ["official_source", "media"],
+  "term_scores": []
+}
