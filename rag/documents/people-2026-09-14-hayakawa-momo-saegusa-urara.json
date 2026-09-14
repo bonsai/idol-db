@@ -1,0 +1,37 @@
+{
+  "schema_version": "2026-09-14",
+  "documents": [
+    {
+      "document_id": "rag:person:hayakawa-momo:2026-09-14",
+      "entity_id": "person:hayakawa-momo",
+      "label": "早河もも",
+      "status": "evidence-backed",
+      "summary": "K-PROプロデュースの『はいどーも！テラスマです！』メンバー。白色担当。アイドル活動とお笑い活動を横断する。",
+      "facts": [
+        {"claim": "はいどーも！テラスマです！のメンバー", "source": "https://kpro-web.com/performers/4293/", "source_type": "official-profile"},
+        {"claim": "白色担当", "source": "https://kpro-web.com/performers/4293/", "source_type": "official-profile"},
+        {"claim": "アイドル×お笑いとして活動", "source": "https://mobile.twstalker.com/TeraSmile1", "source_type": "profile-mirror"},
+        {"claim": "キュウダイテンとして漫才活動", "source": "https://mobile.twstalker.com/TeraSmile1", "source_type": "profile-mirror"}
+      ],
+      "research_tags": ["idol", "idol-comedy", "cross-domain-career", "k-pro", "terasma"],
+      "promotion": {"canonical": true, "reason": "複数の活動プロフィールで本人の所属・役割を確認可能"},
+      "retrieved_at": "2026-09-14"
+    },
+    {
+      "document_id": "rag:person:saegusa-urara:2026-09-14",
+      "entity_id": "person:saegusa-urara",
+      "label": "冴草うらら",
+      "status": "evidence-backed",
+      "summary": "ダダダムズでの活動後、2026年7月にSAKA-SAMAへ加入。idol activityの継続・移動を観察できる事例。",
+      "facts": [
+        {"claim": "元ダダダムズ", "source": "https://www.musicite.net/news/saka-sama-yukkyun", "source_type": "music-news"},
+        {"claim": "2026年7月にSAKA-SAMAへ加入", "source": "https://www.musicite.net/news/saka-sama-yukkyun", "source_type": "music-news"},
+        {"claim": "2026年8月時点でSAKA-SAMA新体制メンバー", "source": "https://news.joysound.com/article/685704", "source_type": "music-news"},
+        {"claim": "2026年3月14日に生誕ライブを実施", "source": "https://tiget.net/users/159309/event_calendar", "source_type": "event-listing"}
+      ],
+      "research_tags": ["idol", "activity-transition", "saka-sama", "dadadams", "career-history"],
+      "promotion": {"canonical": true, "reason": "加入・旧所属を複数媒体で確認。活動履歴としてcanonical化可能"},
+      "retrieved_at": "2026-09-14"
+    }
+  ]
+}
