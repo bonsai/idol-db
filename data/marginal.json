@@ -37,6 +37,37 @@
         "verified_by": "human",
         "last_verified_at": "2026-09-14"
       }
+    },
+    {
+      "id": "person:funira",
+      "label": "フニラ",
+      "label_reading": "Funira",
+      "aliases": ["フニラさん"],
+      "status": "marginal",
+      "canonical_type": "person",
+      "idol_status": "unverified",
+      "ex_idol": false,
+      "reason": "占い・整体・アーティスト活動およびケケノコ族での活動が確認できるが、アイドルとして過去に活動したことを示す十分な一次情報は未確認。アイドル文化との接続を持つ境界事例として保存する。",
+      "roles": ["fortune_teller", "bodyworker", "artist", "kekanoko_leader"],
+      "tags": ["marginal", "boundary-case", "idol-culture", "former-idol-search"],
+      "sources": [
+        {
+          "url": "https://note.com/funira",
+          "type": "personal-profile",
+          "note": "本人noteプロフィール・活動情報"
+        },
+        {
+          "url": "https://niewmedia.com/specials/grandmarquee52697/",
+          "type": "media-profile",
+          "note": "ケケノコ族および現在の活動に関するプロフィール"
+        }
+      ],
+      "provenance": {
+        "confidence": "medium",
+        "verified": false,
+        "verified_by": "human",
+        "last_verified_at": "2026-09-14"
+      }
     }
   ]
 }
