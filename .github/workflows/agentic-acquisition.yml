@@ -1,0 +1,53 @@
+name: Agentic Acquisition
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [agentic-acquisition]
+
+permissions:
+  contents: write
+
+jobs:
+  acquisition:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Plan acquisition
+        run: |
+          mkdir -p data/work/runs
+          python aw/acquisition_planner.py < data/work/seed.json > data/work/acquisition-plan.json
+
+      - name: Execute selected acquisition
+        run: |
+          python aw/acquisition_runner.py < data/work/acquisition-plan.json > data/work/acquisition-result.json
+
+      - name: Persist run record
+        run: |
+          run_id=$(python - <<'PY'
+          import json
+          print(json.load(open('data/work/acquisition-result.json'))['run_id'])
+          PY
+          )
+          mkdir -p "data/work/runs/$run_id"
+          cp data/work/acquisition-plan.json "data/work/runs/$run_id/decision.json"
+          cp data/work/acquisition-result.json "data/work/runs/$run_id/result.json"
+
+      - name: Commit run record
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/work
+          if git diff --cached --quiet; then
+            echo "No acquisition record changes"
+            exit 0
+          fi
+          git commit -m "chore: record agentic acquisition run"
+          git push
