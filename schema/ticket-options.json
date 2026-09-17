@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/bonsai/idol-db/blob/main/schema/ticket-options.json",
+  "title": "Idol Live Ticket Options",
+  "description": "複数券種・条件・追加費用を保持し、AWの500円以下公開判定に利用する。",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["price"],
+    "properties": {
+      "price": {"type": ["number", "null"], "minimum": 0},
+      "currency": {"type": "string", "const": "JPY"},
+      "label": {"type": "string"},
+      "condition": {"type": "string"},
+      "drink_required": {"type": "boolean"},
+      "drink_price": {"type": ["number", "null"], "minimum": 0},
+      "sales_url": {"type": "string", "format": "uri"},
+      "availability": {"type": "string"},
+      "observed_at": {"type": "string", "format": "date-time"},
+      "source_url": {"type": "string", "format": "uri"}
+    },
+    "additionalProperties": false
+  }
+}
