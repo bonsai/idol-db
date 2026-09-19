@@ -1,17 +1,23 @@
 # Idol Data API
 
-'idol-db' exposes canonical structured idol data through a stable API boundary.
+`idol-db` exposes canonical public data through a stable API boundary.
 
 ## Role
 
-    sources
+```text
+Public sources
       ↓
-    idol-db
-      ├─ canonical data
-      ├─ schema
+   idol-db
+      ├─ canonical public data
+      ├─ schema / provenance
       └─ API contract
-           ↓
-       consumers
+             ↓
+      analysis repositories
+             ↓
+       analysis results
+             ↓
+          SaaS / API
+```
 
 The API is designed for loose coupling. Consumers use JSON responses and the documented contract rather than importing internal implementation code.
 
@@ -19,11 +25,13 @@ The API is designed for loose coupling. Consumers use JSON responses and the doc
 
 - `idol-research` — research and observations
 - `idol-playlist` — rankings and playlist-oriented aggregation
-- `music-bigdata` — data science and ML
+- `music-bigdata` — data science, ML, BQML and analysis
 - `bqml-ga4` — behavioral and marketing analysis
-- SaaS clients — search, comparison, trends, and dashboards
+- future Idol SaaS — delivery of derived analysis results
 
-## Initial endpoints
+## Data API
+
+Current canonical-data resources include:
 
 - `GET /events`
 - `GET /idols`
@@ -36,10 +44,23 @@ The API is designed for loose coupling. Consumers use JSON responses and the doc
 
 See [CONTRACT.md](./CONTRACT.md) for the interface definition.
 
-## Product
+## Product API
 
-The API is the delivery layer for an Idol Data product:
+A future commercial API should primarily expose **derived analysis results**, for example:
+
+- rankings
+- trend signals
+- interest scores
+- song / artist comparisons
+- similarity
+- market aggregates
+- model outputs
+- research reports
+
+The canonical public-data API and the commercial analysis API are separate boundaries.
+
+## Product flow
 
 **observe → normalize → analyze → expose → subscribe**
 
-Commercial API plans can later add authentication, quotas, historical depth, derived features, and premium datasets without changing the canonical database boundary.
+`idol-db` does not become the paid product merely because it has an API. The paid value is the analysis generated downstream from public data.
