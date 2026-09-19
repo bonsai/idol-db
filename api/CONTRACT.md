@@ -1,12 +1,12 @@
 # Idol Data API Contract
 
-'idol-db' is the canonical public-data source for the Idol Data API.
+`idol-db` is the canonical public-data source for the Idol Data ecosystem.
 
 ## Purpose
 
-Provide structured idol, music, event, observation, ranking, trend, and feature data to independent clients.
+Provide structured public idol, music, event, observation, ranking, trend, and feature data to independent clients.
 
-The API is the interface between the canonical database and downstream applications such as research tools, analytics, and SaaS.
+The API is the interface between the canonical database and downstream research / analysis systems.
 
 ## Resources
 
@@ -43,41 +43,48 @@ Responses are JSON.
 
 ## Data boundary
 
-'idol-db' owns canonical structured data and the public API contract.
+`idol-db` owns:
+
+- canonical structured public data
+- provenance
+- schema
+- public-data API contract
 
 It does not own:
 
 - general-purpose music ML
-- GA4 collection
 - customer-specific analytics
 - SaaS presentation
+- the commercial analysis product
 
-Those are downstream consumers.
+Those belong downstream.
 
-## Product layers
+## Analysis boundary
 
-    idol-db
-      ↓ API
-    music-bigdata
-      ↓ analysis
-    bqml-ga4
-      ↓ marketing / behavior
-    SaaS
+```text
+idol-db
+   ↓ public data API
+idol-playlist / music-bigdata / BQML
+   ↓
+analysis artifacts
+   ↓
+commercial analysis API
+   ↓
+SaaS
+```
 
-## Coupling
+Analysis artifacts are the product layer. Examples include rankings, trend signals, scores, similarity, market aggregates, predictions, and research reports.
 
-Clients must depend on the API contract, not on internal Python modules or repository files.
+## Loose coupling
+
+Clients must depend on the API contract or exchanged artifacts, not on internal Python modules or repository files.
 
 The implementation remains loosely coupled from canonical data files.
 
-## Productization
+## Commercial principle
 
-The same API can support:
+**Public data is the input. Analysis is the product. API/SaaS is the delivery mechanism.**
 
-- public endpoints
-- rate-limited API access
-- API-key access
-- paid data plans
-- SaaS authentication and quotas
+A commercial service may add authentication, quotas, historical depth, derived features, reports, and customer-specific analysis.
 
-The data license and source attribution requirements must be defined separately before commercial distribution.
+Before commercial use, check the applicable terms, licenses, source attribution requirements, and any restrictions attached to each public source.
