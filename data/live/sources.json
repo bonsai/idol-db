@@ -1,0 +1,32 @@
+{
+  "sources": [
+    {
+      "url": "https://tiget.net/events/520061",
+      "label": "ワンブレンダーフリーライブ",
+      "scope": "idol_free_live",
+      "region": "福岡",
+      "added_at": "2026-09-09T14:53:03+09:00"
+    },
+    {
+      "url": "https://tsukijiguchi-shotengai.jp/event/minato/idol-day/",
+      "label": "名古屋港 × アイドルDAY｜NAGOYA PORT FES 2026",
+      "scope": "idol_free_live",
+      "region": "愛知",
+      "added_at": "2026-09-16T14:55:45+09:00"
+    },
+    {
+      "url": "https://livepocket.jp/",
+      "label": "LivePocket アイドル・イベント検索",
+      "scope": "idol_free_live",
+      "source_kind": "livepocket",
+      "added_at": "2026-09-22T00:00:00+09:00"
+    },
+    {
+      "url": "https://paylove.org/",
+      "label": "PayLove アイドルライブ",
+      "scope": "idol_free_live",
+      "source_kind": "paylove",
+      "added_at": "2026-09-22T00:00:00+09:00"
+    }
+  ]
+}
