@@ -1,0 +1,36 @@
+name: idol-live crawl
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 0 * * 3'
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Crawl and normalize
+        run: python3 scripts/crawl_events.py
+
+      - name: Validate JSON
+        run: |
+          python3 -m json.tool .data/events.json >/dev/null
+          python3 -m json.tool .data/auxiliary.json >/dev/null
+
+      - name: Commit data changes
+        run: |
+          if git diff --quiet -- .data/events.json .data/auxiliary.json; then
+            echo 'No data changes.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .data/events.json .data/auxiliary.json
+          git commit -m 'data: refresh idol live events'
+          git push
