@@ -10,6 +10,22 @@
     {"id":"official_discovery","template":"%s アイドル 公式","terms":["ライブ情報","イベント情報","スケジュール","出演情報"],"limit":10},
     {"id":"agency_discovery","template":"%s アイドル 運営 イベント","terms":["事務所","運営","主催","制作"],"limit":10},
     {"id":"genre_discovery","template":"%s アイドル ライブ","terms":["地下アイドル","女性アイドル","ローカルアイドル","ご当地アイドル","アイドルフェス"],"limit":10},
-    {"id":"edge_discovery","template":"%s アイドル","terms":["リリースイベント","生誕祭","周年","卒業","新体制","お披露目"],"limit":10}
+    {"id":"edge_discovery","template":"%s アイドル","terms":["リリースイベント","生誕祭","周年","卒業","新体制","お披露目"],"limit":10},
+
+    {"id":"song_discovery","template":"%s アイドル 曲","terms":["新曲","新曲リリース","楽曲","MV","Music Video","歌詞","配信","サブスク"],"limit":12},
+    {"id":"song_performer_discovery","template":"%s アイドル 楽曲","terms":["おすすめ","人気曲","代表曲","ライブ定番曲","最新曲"],"limit":10},
+    {"id":"music_platform_discovery","template":"%s アイドル 音楽","terms":["YouTube","Spotify","Apple Music","TikTok","配信"],"limit":10},
+
+    {"id":"ego_search","template":"%s アイドル","terms":["評判","感想","口コミ","好き","推し","おすすめ","話題","バズ","炎上"],"limit":12},
+    {"id":"fan_voice","template":"%s アイドル ファン","terms":["感想","現場","ライブレポ","物販","特典会","遠征","推し活"],"limit":10},
+    {"id":"social_listening","template":"%s アイドル SNS","terms":["X","Instagram","TikTok","YouTube","投稿","反応"],"limit":10},
+
+    {"id":"business_need","template":"%s アイドル","terms":["案件","スポンサー","広告","コラボ","タイアップ","企業","ブランド"],"limit":10},
+    {"id":"business_supply","template":"%s アイドル","terms":["出演依頼","キャスティング","イベント出演","広告出演","コラボ募集"],"limit":10},
+    {"id":"merchandise","template":"%s アイドル","terms":["グッズ","物販","写真","チェキ","限定","通販"],"limit":10},
+    {"id":"collaboration","template":"%s アイドル コラボ","terms":["飲食店","アパレル","美容","ゲーム","アニメ","地域","観光"],"limit":10},
+
+    {"id":"growth_signal","template":"%s アイドル","terms":["新メンバー","オーディション","デビュー","新体制","活動開始"],"limit":10},
+    {"id":"risk_signal","template":"%s アイドル","terms":["休止","解散","卒業","脱退","中止","延期"],"limit":10}
   ]
 }
