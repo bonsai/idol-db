@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "name": "ゆるい低予算アイドルライブ検索",
+  "checked_at": "2026-09-08",
+  "criteria": {
+    "max_total_price_jpy": 1000,
+    "strictly_under": true,
+    "drink_fee_included": true,
+    "allow_free": true,
+    "allow_unknown_price": true,
+    "allow_purchase_condition": true,
+    "allow_reservation": true
+  },
+  "metadata_fields": {
+    "admission_price": "入場料",
+    "drink_price": "必須ドリンク代。未知ならnull",
+    "total_price": "入場料+必須ドリンク等。未知ならnull",
+    "drink_included": "total_priceに必須ドリンク代を含めたか",
+    "within_budget": "確認できた実費が1000円未満、または料金不明なら候補としてtrue",
+    "confidence": "確認済み / 要確認",
+    "source_type": "公式 / 会場公式 / チケット販売 / 公式SNS / その他",
+    "checked_at": "最後に料金・開催情報を確認した日",
+    "tags": "検索用タグ",
+    "note": "条件の補足"
+  },
+  "ranking_hint": [
+    "total_priceが安いものを優先",
+    "drink_priceまで確認できているものを優先",
+    "料金不明は除外せず要確認として残す",
+    "物販・CD購入など実質的な条件もnote/tagsに残す"
+  ]
+}
