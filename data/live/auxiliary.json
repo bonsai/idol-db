@@ -1,0 +1,160 @@
+{
+  "dataset": "idol_free_live_auxiliary",
+  "generated_at": "2026-09-23T04:44:49.258303+00:00",
+  "candidates": [
+    {
+      "date": null,
+      "title": "",
+      "admission": {
+        "price": null,
+        "free": false,
+        "drink_required": false,
+        "reservation_required": false
+      },
+      "source_url": "https://livepocket.jp/",
+      "fetched_at": "2026-09-23T04:44:49.258303+00:00",
+      "source_kind": "livepocket",
+      "reason": "discovered-source-page"
+    },
+    {
+      "date": null,
+      "title": "PayLove",
+      "admission": {
+        "price": null,
+        "free": false,
+        "drink_required": false,
+        "reservation_required": false
+      },
+      "source_url": "https://paylove.org/",
+      "fetched_at": "2026-09-23T04:44:49.258303+00:00",
+      "source_kind": "paylove",
+      "reason": "discovered-source-page"
+    },
+    {
+      "date": null,
+      "title": "\u0000\u0000\u0001\u0000\u0004\u0000\u0010\u0010\u0000\u0000\u0001\u0000 \u0000h\u0004\u0000\u0000F\u0000\u0000\u0000 \u0000\u0000\u0001\u0000 \u0000�\u0010\u0000\u0000�\u0004\u0000\u000000\u0000\u0000\u0001\u0000 \u0000�%\u0000\u0000V\u0015\u0000\u0000@@\u0000\u0000\u0001\u0000 \u0000(B\u0000\u0000�:\u0000\u0000(\u0000\u0000\u0000\u0010\u0000\u0000\u0000 \u0000\u0000\u0000\u0001\u0000 \u0000\u0000\u0000\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000���������������������������������������������������",
+      "admission": {
+        "price": null,
+        "free": false,
+        "drink_required": false,
+        "reservation_required": false
+      },
+      "source_url": "https://paylove.org/favicon.ico",
+      "fetched_at": "2026-09-23T04:44:49.258303+00:00",
+      "source_kind": "paylove",
+      "reason": "discovered-source-page"
+    },
+    {
+      "date": "2026-04-14",
+      "title": "�PNG \u001a \u0000\u0000\u0000 IHDR\u0000\u0000\u0000 \u0000\u0000\u0000 \b\u0003\u0000\u0000\u0000D���\u0000\u0000\u0000 cHRM\u0000\u0000z&\u0000\u0000��\u0000\u0000�\u0000\u0000\u0000��\u0000\u0000u0\u0000\u0000�`\u0000\u0000:�\u0000\u0000\u0017p��Q s��� \u0017/]�\u0002 ��׮߸y������?x���Ϟ�x)���\u001bx@�e}�����̇����?������L\\�~�\u0006w� ��\u0019\u0019�2�c`��\u0002 ���",
+      "admission": {
+        "price": null,
+        "free": false,
+        "drink_required": false,
+        "reservation_required": false
+      },
+      "source_url": "https://paylove.org/favicon-32x32.png",
+      "fetched_at": "2026-09-23T04:44:49.258303+00:00",
+      "source_kind": "paylove",
+      "reason": "discovered-source-page"
+    },
+    {
+      "date": "2026-04-14",
+      "title": "�PNG \u001a \u0000\u0000\u0000 IHDR\u0000\u0000\u0000\u0010\u0000\u0000\u0000\u0010\b\u0003\u0000\u0000\u0000(-\u000fS\u0000\u0000\u0000 cHRM\u0000\u0000z&\u0000\u0000��\u0000\u0000�\u0000\u0000\u0000��\u0000\u0000u0\u0000\u0000�`\u0000\u0000:�\u0000\u0000\u0017p��Q<\u0000\u0000\u0001\u0002PLTE����������������������������������������������������������������������������",
+      "admission": {
+        "price": null,
+        "free": false,
+        "drink_required": false,
+        "reservation_required": false
+      },
+      "source_url": "https://paylove.org/favicon-16x16.png",
+      "fetched_at": "2026-09-23T04:44:49.258303+00:00",
+      "source_kind": "paylove",
+      "reason": "discovered-source-page"
+    },
+    {
+      "date": "2026-04-14",
+      "title": "�PNG \u001a \u0000\u0000\u0000 IHDR\u0000\u0000\u0000�\u0000\u0000\u0000�\b\u0006\u0000\u0000\u0000=�\u00062\u0000\u0000\u0000 cHRM\u0000\u0000z&\u0000\u0000��\u0000\u0000�\u0000\u0000\u0000��\u0000\u0000u0\u0000\u0000�`\u0000\u0000:�\u0000\u0000\u0017p��Q z�'� ��� >�1W�����7��\u0006\u0011N��挫!J�\u0013��4��� ;[�$⛔�94M�0 \u0004\u0000A@\u0014Es�\u0010D\u0004�9��5t]�0t�ZADQl�\u0002\u0011��'",
+      "admission": {
+        "price": null,
+        "free": false,
+        "drink_required": false,
+        "reservation_required": false
+      },
+      "source_url": "https://paylove.org/apple-touch-icon.png",
+      "fetched_at": "2026-09-23T04:44:49.258303+00:00",
+      "source_kind": "paylove",
+      "reason": "discovered-source-page"
+    },
+    {
+      "date": null,
+      "title": "/** * @vue/shared v3.5.16 * (c) 2018-present Yuxi (Evan) You and Vue contributors * @license MIT **/ /*! #__NO_SIDE_EFFECTS__ */ function e(e){const t=Object.cr",
+      "admission": {
+        "price": null,
+        "free": false,
+        "drink_required": false,
+        "reservation_required": false
+      },
+      "source_url": "https://paylove.org/assets/vendor-dd23c489.js",
+      "fetched_at": "2026-09-23T04:44:49.258303+00:00",
+      "source_kind": "paylove",
+      "reason": "discovered-source-page"
+    },
+    {
+      "date": null,
+      "title": "const e={},t=function(t,i,a){if(!i||0===i.length)return t();const s=document.getElementsByTagName(\"link\");return Promise.all(i.map(t=>{if((t=function(e){return\"",
+      "admission": {
+        "price": null,
+        "free": false,
+        "drink_required": false,
+        "reservation_required": false
+      },
+      "source_url": "https://paylove.org/assets/qr-scanner-273fd050.js",
+      "fetched_at": "2026-09-23T04:44:49.258303+00:00",
+      "source_kind": "paylove",
+      "reason": "discovered-source-page"
+    },
+    {
+      "date": null,
+      "title": "var t=\"undefined\"!=typeof globalThis?globalThis:\"undefined\"!=typeof window?window:\"undefined\"!=typeof global?global:\"undefined\"!=typeof self?self:{};function e(",
+      "admission": {
+        "price": null,
+        "free": false,
+        "drink_required": false,
+        "reservation_required": false
+      },
+      "source_url": "https://paylove.org/assets/utils-6007becd.js",
+      "fetched_at": "2026-09-23T04:44:49.258303+00:00",
+      "source_kind": "paylove",
+      "reason": "discovered-source-page"
+    },
+    {
+      "date": null,
+      "title": ".Vue-Toastification__container{z-index:9999;position:fixed;padding:4px;width:600px;box-sizing:border-box;display:flex;min-height:100%;color:#fff;flex-direction:",
+      "admission": {
+        "price": null,
+        "free": false,
+        "drink_required": true,
+        "reservation_required": false
+      },
+      "source_url": "https://paylove.org/assets/index-65399a22.css",
+      "fetched_at": "2026-09-23T04:44:49.258303+00:00",
+      "source_kind": "paylove",
+      "reason": "discovered-source-page"
+    },
+    {
+      "date": null,
+      "title": "PayLove",
+      "admission": {
+        "price": null,
+        "free": false,
+        "drink_required": false,
+        "reservation_required": false
+      },
+      "source_url": "https://paylove.org/assets/${t}",
+      "fetched_at": "2026-09-23T04:44:49.258303+00:00",
+      "source_kind": "paylove",
+      "reason": "discovered-source-page"
+    }
+  ]
+}
