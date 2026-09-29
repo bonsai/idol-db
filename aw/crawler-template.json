@@ -1,0 +1,15 @@
+{
+  "engine": "both",
+  "user_agent": "bonsai/idol-db-crawler/1.0",
+  "intents": [
+    {"id":"event_discovery","template":"%s アイドル ライブ イベント","terms":["東京","関東","大阪","名古屋","全国"],"limit":12},
+    {"id":"date_discovery","template":"%s アイドル ライブ 2026","terms":["今日","今週","今月","10月","11月","12月"],"limit":12},
+    {"id":"venue_discovery","template":"%s アイドル ライブハウス","terms":["新宿","渋谷","池袋","秋葉原","横浜","川崎"],"limit":10},
+    {"id":"ticket_discovery","template":"%s アイドル チケット","terms":["前売","当日券","予約","販売","受付"],"limit":10},
+    {"id":"performer_discovery","template":"%s アイドル 出演","terms":["ライブ","イベント","フェス","対バン","ワンマン"],"limit":10},
+    {"id":"official_discovery","template":"%s アイドル 公式","terms":["ライブ情報","イベント情報","スケジュール","出演情報"],"limit":10},
+    {"id":"agency_discovery","template":"%s アイドル 運営 イベント","terms":["事務所","運営","主催","制作"],"limit":10},
+    {"id":"genre_discovery","template":"%s アイドル ライブ","terms":["地下アイドル","女性アイドル","ローカルアイドル","ご当地アイドル","アイドルフェス"],"limit":10},
+    {"id":"edge_discovery","template":"%s アイドル","terms":["リリースイベント","生誕祭","周年","卒業","新体制","お披露目"],"limit":10}
+  ]
+}
