@@ -1,0 +1,189 @@
+{
+  "checked_at": "2026-09-17",
+  "scope": "東京アイドル・低予算/フリーライブ 2026-09-01〜2026-09-21",
+  "policy": {
+    "target_total_price_jpy": 1000,
+    "drink_included": true,
+    "unknown_price_kept": true
+  },
+  "candidates": [
+    {
+      "date": "2026-09-01",
+      "title": "るるぱーてぃー!! vol.10",
+      "venue": "GOTANDA G6",
+      "area": "東京",
+      "confidence": "掲載確認",
+      "source_type": "PayLoveイベント一覧",
+      "checked_at": "2026-09-17",
+      "tags": ["PayLove", "GOTANDA G6"],
+      "source_url": "https://paylove.org/"
+    },
+    {
+      "date": "2026-09-04",
+      "title": "無銭ぷろじぇくと!! vol.103",
+      "venue": "GOTANDA G6",
+      "area": "東京",
+      "confidence": "掲載確認",
+      "source_type": "PayLoveイベント一覧",
+      "checked_at": "2026-09-17",
+      "tags": ["PayLove", "無銭", "GOTANDA G6"],
+      "source_url": "https://paylove.org/"
+    },
+    {
+      "date": "2026-09-05",
+      "start_at": "09:55",
+      "title": "無銭ぷろじぇくと!! vol.104",
+      "venue": "GOTANDA G6",
+      "area": "東京",
+      "admission_price": 0,
+      "confidence": "確認済み",
+      "source_type": "公式イベントページ",
+      "checked_at": "2026-09-17",
+      "tags": ["PayLove", "無銭", "フリーライブ", "GOTANDA G6"],
+      "note": "通常エリア0円。前方2,500円。当日各種+1,000円。別途2ドリンク。再入場可能。",
+      "source_url": "https://paylove.org/idols/83"
+    },
+    {
+      "date": "2026-09-08",
+      "title": "Anluce♡Sugar主催　Sugar×Sugar×Sugar",
+      "venue": "大塚FUTURE",
+      "area": "東京",
+      "confidence": "掲載確認",
+      "source_type": "PayLoveイベント一覧",
+      "checked_at": "2026-09-17",
+      "tags": ["PayLove", "大塚"],
+      "source_url": "https://paylove.org/"
+    },
+    {
+      "date": "2026-09-09",
+      "title": "GENKAI FEST!! vol.29",
+      "venue": "GOTANDA G6",
+      "area": "東京",
+      "confidence": "掲載確認",
+      "source_type": "PayLoveイベント一覧",
+      "checked_at": "2026-09-17",
+      "tags": ["PayLove", "GOTANDA G6"],
+      "source_url": "https://paylove.org/"
+    },
+    {
+      "date": "2026-09-12",
+      "title": "キミ推しフェス vol.167",
+      "venue": "GOTANDA G3",
+      "area": "東京",
+      "confidence": "掲載確認",
+      "source_type": "PayLoveイベント一覧",
+      "checked_at": "2026-09-17",
+      "tags": ["PayLove", "GOTANDA G3"],
+      "source_url": "https://paylove.org/"
+    },
+    {
+      "date": "2026-09-12",
+      "title": "スターアイドルサミット vol.23",
+      "venue": "横浜ランドマークホール",
+      "area": "神奈川",
+      "confidence": "掲載確認",
+      "source_type": "PayLoveイベント一覧",
+      "checked_at": "2026-09-17",
+      "tags": ["PayLove", "横浜"],
+      "source_url": "https://paylove.org/"
+    },
+    {
+      "date": "2026-09-13",
+      "title": "もぐともぐもぐお誕生日会",
+      "venue": "新宿BUZZmusicLABO",
+      "area": "東京",
+      "confidence": "掲載確認",
+      "source_type": "PayLoveイベント一覧",
+      "checked_at": "2026-09-17",
+      "tags": ["PayLove", "新宿"],
+      "source_url": "https://paylove.org/"
+    },
+    {
+      "date": "2026-09-13",
+      "title": "「輝け！」ぷらちなまふぃあ。新体制デビューLIVE",
+      "venue": "新宿BUZZmusicLABO",
+      "area": "東京",
+      "confidence": "掲載確認",
+      "source_type": "PayLoveイベント一覧",
+      "checked_at": "2026-09-17",
+      "tags": ["PayLove", "新宿"],
+      "source_url": "https://paylove.org/"
+    },
+    {
+      "date": "2026-09-16",
+      "title": "GENKAI FEST!! vol.30",
+      "venue": "GOTANDA G6",
+      "area": "東京",
+      "confidence": "掲載確認",
+      "source_type": "PayLoveイベント一覧",
+      "checked_at": "2026-09-17",
+      "tags": ["PayLove", "GOTANDA G6"],
+      "source_url": "https://paylove.org/"
+    },
+    {
+      "date": "2026-09-17",
+      "start_at": "17:20",
+      "title": "無銭ぷろじぇくと!! vol.105",
+      "venue": "GOTANDA G6",
+      "area": "東京",
+      "admission_price": 0,
+      "drink_price": null,
+      "total_price": null,
+      "drink_included": false,
+      "within_budget": true,
+      "confidence": "確認済み",
+      "source_type": "公式イベントページ",
+      "checked_at": "2026-09-17",
+      "tags": ["PayLove", "無銭", "フリーライブ", "GOTANDA G6"],
+      "note": "通常エリア0円。前方エリア2,000円。当日各種+1,000円。別途2ドリンク。再入場無料。開場17:00、開演17:20。",
+      "source_url": "https://paylove.org/idols/83"
+    },
+    {
+      "date": "2026-09-19",
+      "start_at": "09:50",
+      "title": "無銭ぷろじぇくと!! vol.106",
+      "venue": "GOTANDA G6",
+      "area": "東京",
+      "admission_price": 0,
+      "confidence": "確認済み",
+      "source_type": "その他",
+      "checked_at": "2026-09-17",
+      "tags": ["PayLove", "無銭", "フリーライブ", "GOTANDA G6"],
+      "note": "通常0円。前方2,500円。当日各種+1,000円。2D別。",
+      "source_url": "https://mawaseru.live/a/no_frame/"
+    },
+    {
+      "date": "2026-09-21",
+      "title": "無銭ぷろじぇくと!! vol.107",
+      "venue": "GOTANDA G6",
+      "area": "東京",
+      "confidence": "掲載確認",
+      "source_type": "PayLoveイベント一覧",
+      "checked_at": "2026-09-17",
+      "tags": ["PayLove", "無銭", "GOTANDA G6"],
+      "source_url": "https://paylove.org/"
+    },
+    {
+      "date": "2026-09-17",
+      "title": "GIRLS☆DELIGHT#380-上野野音無銭祭",
+      "area": "東京",
+      "admission_price": null,
+      "drink_price": null,
+      "total_price": null,
+      "drink_included": null,
+      "within_budget": true,
+      "confidence": "要確認",
+      "source_type": "チケット販売",
+      "checked_at": "2026-09-08",
+      "tags": ["無銭", "上野", "野音", "料金要確認"],
+      "note": "イベント掲載を確認。通常入場料金・ドリンク条件を追加確認する候補。",
+      "source_url": "https://livepocket.jp/e/girlsdelight380"
+    }
+  ],
+  "research_notes": [
+    "PayLove公式イベント一覧から2026-09-01〜2026-09-21の掲載イベントを追記。",
+    "無銭ぷろじぇくと!! vol.103〜107はPayLove掲載を確認。vol.104/105は公式イベントページで通常エリア0円を確認済み。",
+    "GENKAI FEST!!、キミ推しフェス、スターアイドルサミット、新宿BUZZmusicLABO等のPayLove掲載イベントも追加。",
+    "2026-09-17にPayLove公式イベントページで無銭ぷろじぇくと!! vol.105（GOTANDA G6、通常エリア0円、別途2ドリンク、17:00/17:20）を確認。"
+  ]
+}
