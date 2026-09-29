@@ -1,0 +1,62 @@
+name: Validate event data
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.data/**'
+      - 'scripts/**'
+      - '.github/workflows/data.yml'
+  pull_request:
+    paths:
+      - '.data/**'
+      - 'scripts/**'
+      - '.github/workflows/data.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Validate JSON data
+        run: python scripts/events_db.py validate
+
+      - name: Build SQLite database
+        run: python scripts/events_db.py import
+
+      - name: SQLite smoke test
+        run: |
+          python - <<'PY'
+          import sqlite3
+          from pathlib import Path
+
+          db = sqlite3.connect('.data/events.db')
+          events = db.execute('select count(*) from events').fetchone()[0]
+          sources = db.execute('select count(*) from sources').fetchone()[0]
+          if events == 0:
+              raise SystemExit('SQLite database contains no events')
+          print(f'SQLite OK: {events} events, {sources} sources')
+          db.close()
+          PY
+
+      - name: Validate research JSON
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          for path in sorted(Path('.data').glob('research-*.json')):
+              json.loads(path.read_text(encoding='utf-8'))
+              print(f'validated {path}')
+          PY
