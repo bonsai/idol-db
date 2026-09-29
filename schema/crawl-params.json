@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "contract": "bonsai/idol-research/schema/discovery.py",
+  "engine": ["bing", "google-news", "both"],
+  "observation": {
+    "required": ["observation_id", "observed_at", "family", "intent", "kind", "query", "title", "url", "discovery_engine"],
+    "enums": {
+      "family": ["event", "music", "fan", "business", "growth", "risk"],
+      "kind": ["search_result", "mention", "track_signal", "business_signal"],
+      "subject_type": ["idol", "group", "song", "event", "venue", "agency", "brand", "unknown"]
+    }
+  },
+  "crawler": {
+    "timeout_seconds": {"type": "integer", "min": 1, "max": 120, "default": 20},
+    "max_queries": {"type": "integer", "min": 1, "max": 5000, "default": 500},
+    "limit_per_query": {"type": "integer", "min": 1, "max": 100, "default": 10},
+    "dedupe_key": "url"
+  }
+}
